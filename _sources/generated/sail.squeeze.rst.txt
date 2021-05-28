@@ -1,0 +1,6 @@
+﻿sail.squeeze
+============
+
+.. currentmodule:: sail
+
+.. autofunction:: squeeze

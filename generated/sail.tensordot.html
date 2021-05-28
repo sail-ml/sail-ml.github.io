@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2D2D2D" />
+  
+  <title>SAIL :: sail.tensordot</title>
+  
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../_static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../_static/img/favicon-16x16.png">
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+
+  <link rel="stylesheet" href="../_static/css/insegel.css"/>
+
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'',
+        VERSION:'',
+        LANGUAGE:'None',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+  </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  <script src="https://email.tl.fortawesome.com/c/eJxNjUEOgyAQAF8jR7Kw6wIHDh7sP1Cw2mgxgmn6-3JsMqc5zEQfE8dkxOY1KKMUOI3ACFKRJpSW2AAp7ontYIaxI6i7XPJVwyeVfCQ550Os3jLrGSNOLgbdAy6s0PBk2TFNjEbsfq31LB0OnX407pJa5v2faRadwSW63mn5KuLyR9j2tgx3zecanl-55R_-jjPs"></script>
+
+</head>
+
+<body>
+  <div id="insegel-container">
+    <header>
+      <div id="logo-container">
+          
+          <a href="../index.html"><img src="../_static/sail-logo.png"></a>
+          
+
+      </div>
+      <div id="project-container">
+        <h1>SAIL Documentation</h1>
+      </div>
+    </header>
+
+    <div id="content-container">
+
+      <div id="main-content-container">
+        <div id="main-content-header">
+          <h1>sail.tensordot</h1>
+        </div>
+        <div id="main-content">
+          
+  <section id="sail-tensordot">
+<h1>sail.tensordot<a class="headerlink" href="#sail-tensordot" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="sail.tensordot">
+<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">tensordot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tensor</span><a class="headerlink" href="#sail.tensordot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes tensor dot product along axes provided</p>
+<p>When axes is array_like as <code class="docutils literal notranslate"><span class="pre">(a_axes,</span> <span class="pre">b_axes)</span></code> then sum the products of
+<cite>a</cite>’s and <cite>b</cite>’s elements over the axis specified in <code class="docutils literal notranslate"><span class="pre">(a_axes,</span> <span class="pre">b_axes)</span></code>.
+If axes is an integer <cite>N</cite>, then the last <cite>N</cite> dimensions of <cite>a</cite> and first
+<cite>N</cite> dimensions of <cite>b</cite> are used as <code class="docutils literal notranslate"><span class="pre">(a_axes,</span> <span class="pre">b_axes)</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>Tensor</em>) – A 2D tensor</p></li>
+<li><p><strong>b</strong> (<em>Tensor</em>) – A 2D tensor</p></li>
+<li><p><strong>axes</strong> (<em>int</em><em> or </em><em>(</em><em>2</em><em>,</em><em>) </em><em>array_like</em>) – Axes to be summed over</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<dl class="simple">
+<dt>Common uses:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">0</span></code> computes tensor product</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">1</span></code> computes tensor dot product</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">2</span></code> computes tensor double contraction</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">tensordot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
+<span class="go">tensor([[68.6690377  67.59605111]</span>
+<span class="go">        [90.75735783 89.86956470]</span>
+<span class="go">        [81.16694957 80.29772401]</span>
+<span class="go">        [92.65692908 92.05914529]</span>
+<span class="go">        [94.18139766 93.41372834]], shape=(5, 2))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+        </div>
+      </div>
+
+      <div id="side-menu-container">
+
+        <div id="search" role="search">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" placeholder="Search..." />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+        </form>
+</div>
+
+        <div id="side-menu" role="navigation">
+
+          
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../details/view-or-copy.html">View or Copy</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../sail.html">SAIL</a></li>
+</ul>
+
+  
+
+
+        </div>
+
+        
+
+      </div>
+
+    </div>
+
+<footer>
+    <div id="footer-info">
+        <ul id="build-details">
+            
+                <li class="footer-element">
+                    
+                        <a href="../_sources/generated/sail.tensordot.rst.txt" rel="nofollow"> source</a>
+                    
+                </li>
+            
+
+            
+
+            
+        </ul>
+        <div id="credit">
+            created with <a href="http://sphinx-doc.org/">Sphinx</a> and <a href="https://github.com/Autophagy/insegel">Insegel</a>
+
+        </div>
+    </div>
+
+    <a id="menu-toggle" class="fa fa-bars" aria-hidden="true"></a>
+
+    <script type="text/javascript">
+      $("#menu-toggle").click(function() {
+        $("#menu-toggle").toggleClass("toggled");
+        $("#side-menu-container").slideToggle(300);
+      });
+    </script>
+
+</footer> 
+
+</div>
+
+</body>
+</html>

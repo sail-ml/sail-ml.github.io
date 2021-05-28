@@ -1,0 +1,6 @@
+﻿sail.matmul
+===========
+
+.. currentmodule:: sail
+
+.. autofunction:: matmul

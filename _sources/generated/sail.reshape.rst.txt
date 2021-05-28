@@ -1,0 +1,6 @@
+﻿sail.reshape
+============
+
+.. currentmodule:: sail
+
+.. autofunction:: reshape

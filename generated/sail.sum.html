@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#2D2D2D" />
   
-  <title>SAIL :: sail.add</title>
+  <title>SAIL :: sail.sum</title>
   
 
   <link rel="icon" type="image/png" sizes="32x32" href="../_static/img/favicon-32x32.png">
@@ -31,7 +31,6 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <script src="https://email.tl.fortawesome.com/c/eJxNjUEOgyAQAF8jR7Kw6wIHDh7sP1Cw2mgxgmn6-3JsMqc5zEQfE8dkxOY1KKMUOI3ACFKRJpSW2AAp7ontYIaxI6i7XPJVwyeVfCQ550Os3jLrGSNOLgbdAy6s0PBk2TFNjEbsfq31LB0OnX407pJa5v2faRadwSW63mn5KuLyR9j2tgx3zecanl-55R_-jjPs"></script>
 
@@ -55,32 +54,28 @@
 
       <div id="main-content-container">
         <div id="main-content-header">
-          <h1>sail.add</h1>
+          <h1>sail.sum</h1>
         </div>
         <div id="main-content">
           
-  <section id="sail-add">
-<h1>sail.add<a class="headerlink" href="#sail-add" title="Permalink to this headline">¶</a></h1>
+  <section id="sail-sum">
+<h1>sail.sum<a class="headerlink" href="#sail-sum" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="sail.add">
-<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tensor</span><a class="headerlink" href="#sail.add" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds two tensors together using elementwise operations</p>
-<div class="math notranslate nohighlight">
-\[\text{out} = \text{a} + \text{b}\]</div>
+<dt class="sig sig-object py" id="sail.sum">
+<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">sum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tensor</span><a class="headerlink" href="#sail.sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sums tensor across all axis. DOES NOT SUPPORT AXIS REDUCTION YET</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<em>Tensor</em>) – First tensor</p></li>
-<li><p><strong>b</strong> (<em>Tensor</em>) – Second tensor</p></li>
-</ul>
+<dd class="field-odd"><p><strong>x</strong> (<em>Tensor</em>) – Tensor</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>If tensor shapes do not match, they must be broadcastable to a common shape.</p>
+<p>DOES NOT SUPPORT AXIS REDUCTION YET</p>
 <p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span>
+<span class="go">[259.29771532]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -134,7 +129,7 @@
             
                 <li class="footer-element">
                     
-                        <a href="../_sources/generated/sail.add.rst.txt" rel="nofollow"> source</a>
+                        <a href="../_sources/generated/sail.sum.rst.txt" rel="nofollow"> source</a>
                     
                 </li>
             

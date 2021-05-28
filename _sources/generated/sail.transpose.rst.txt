@@ -1,0 +1,6 @@
+﻿sail.transpose
+==============
+
+.. currentmodule:: sail
+
+.. autofunction:: transpose

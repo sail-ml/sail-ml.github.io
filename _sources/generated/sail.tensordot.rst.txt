@@ -1,0 +1,6 @@
+﻿sail.tensordot
+==============
+
+.. currentmodule:: sail
+
+.. autofunction:: tensordot

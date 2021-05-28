@@ -1,0 +1,6 @@
+﻿sail.sum
+========
+
+.. currentmodule:: sail
+
+.. autofunction:: sum

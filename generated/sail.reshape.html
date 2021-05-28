@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#2D2D2D" />
   
-  <title>SAIL :: sail.add</title>
+  <title>SAIL :: sail.reshape</title>
   
 
   <link rel="icon" type="image/png" sizes="32x32" href="../_static/img/favicon-32x32.png">
@@ -31,7 +31,6 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <script src="https://email.tl.fortawesome.com/c/eJxNjUEOgyAQAF8jR7Kw6wIHDh7sP1Cw2mgxgmn6-3JsMqc5zEQfE8dkxOY1KKMUOI3ACFKRJpSW2AAp7ontYIaxI6i7XPJVwyeVfCQ550Os3jLrGSNOLgbdAy6s0PBk2TFNjEbsfq31LB0OnX407pJa5v2faRadwSW63mn5KuLyR9j2tgx3zecanl-55R_-jjPs"></script>
 
@@ -55,32 +54,36 @@
 
       <div id="main-content-container">
         <div id="main-content-header">
-          <h1>sail.add</h1>
+          <h1>sail.reshape</h1>
         </div>
         <div id="main-content">
           
-  <section id="sail-add">
-<h1>sail.add<a class="headerlink" href="#sail-add" title="Permalink to this headline">¶</a></h1>
+  <section id="sail-reshape">
+<h1>sail.reshape<a class="headerlink" href="#sail-reshape" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="sail.add">
-<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tensor</span><a class="headerlink" href="#sail.add" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds two tensors together using elementwise operations</p>
-<div class="math notranslate nohighlight">
-\[\text{out} = \text{a} + \text{b}\]</div>
+<dt class="sig sig-object py" id="sail.reshape">
+<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">reshape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_shape</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tensor</span><a class="headerlink" href="#sail.reshape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a reshaped view or copy of x</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<em>Tensor</em>) – First tensor</p></li>
-<li><p><strong>b</strong> (<em>Tensor</em>) – Second tensor</p></li>
+<li><p><strong>a</strong> (<em>Tensor</em>) – A tensor</p></li>
+<li><p><strong>new_shape</strong> (<em>int</em><em> or </em><em>tuple of ints</em>) – New shape to reshape current tensor to</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>If tensor shapes do not match, they must be broadcastable to a common shape.</p>
+<p>The product of <code class="docutils literal notranslate"><span class="pre">new_shape</span></code> must equal to the product of <code class="docutils literal notranslate"><span class="pre">x.shape</span></code>.
+Please reference <a class="reference internal" href="../details/view-or-copy.html#view-or-copy"><span class="std std-ref">View or Copy</span></a> to understand the view and copy semantics of mutation ops.</p>
 <p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="mi">50</span><span class="p">,))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span>
+<span class="go">tensor([16.18203862 18.50684281 15.42109824 18.73249409 10.97883629 11.32670094 19.33858661 15.04789185 14.09147722 10.3919068</span>
+<span class="go">        11.78628816 11.76781659 18.85068472 15.92606394 13.51610928 16.18784979 10.29533935 15.41951687 13.20227250 16.15049507</span>
+<span class="go">        11.9578741  11.72929486 15.90927212 13.98141742 10.31550054 17.21158466 16.4676709  15.0713949  14.1175728  10.878843</span>
+<span class="go">        17.1788167  14.15315004 15.87499473 17.37671597 13.62390671 11.56796764 11.46058571 14.04684157 11.51550815 13.89845898</span>
+<span class="go">        15.86720937 12.33080025 19.41888801 17.05646893 18.79913074 18.37086576 13.14104103 18.89630395 13.39037792 11.99629855], shape=(50))</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -134,7 +137,7 @@
             
                 <li class="footer-element">
                     
-                        <a href="../_sources/generated/sail.add.rst.txt" rel="nofollow"> source</a>
+                        <a href="../_sources/generated/sail.reshape.rst.txt" rel="nofollow"> source</a>
                     
                 </li>
             

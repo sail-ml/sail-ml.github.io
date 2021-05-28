@@ -1,0 +1,6 @@
+﻿sail.expand\_dims
+=================
+
+.. currentmodule:: sail
+
+.. autofunction:: expand_dims
