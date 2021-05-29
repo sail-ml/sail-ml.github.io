@@ -1,0 +1,6 @@
+﻿sail.Tensor.numpy
+=================
+
+.. currentmodule:: sail
+
+.. automethod:: Tensor.numpy

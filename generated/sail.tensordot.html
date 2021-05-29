@@ -1,68 +1,283 @@
+
 <!DOCTYPE html>
-<head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#2D2D2D" />
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sail.tensordot &#8212; SAIL  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="sail.sum" href="sail.sum.html" />
+    <link rel="prev" title="sail.matmul" href="sail.matmul.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/sail-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
   
-  <title>SAIL :: sail.tensordot</title>
-  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../details/index.html">
+  About
+ </a>
+</li>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../_static/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../_static/img/favicon-16x16.png">
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../api-reference.html">
+  SAIL Reference
+ </a>
+</li>
 
-  <link rel="stylesheet" href="../_static/css/insegel.css"/>
-
-  <script type="text/javascript">
-    var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:'',
-        VERSION:'',
-        LANGUAGE:'None',
-        COLLAPSE_INDEX:false,
-        FILE_SUFFIX:'.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-    };
-  </script>
-    <script type="text/javascript" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  <script src="https://email.tl.fortawesome.com/c/eJxNjUEOgyAQAF8jR7Kw6wIHDh7sP1Cw2mgxgmn6-3JsMqc5zEQfE8dkxOY1KKMUOI3ACFKRJpSW2AAp7ontYIaxI6i7XPJVwyeVfCQ550Os3jLrGSNOLgbdAy6s0PBk2TFNjEbsfq31LB0OnX407pJa5v2faRadwSW63mn5KuLyR9j2tgx3zecanl-55R_-jjPs"></script>
-
-</head>
-
-<body>
-  <div id="insegel-container">
-    <header>
-      <div id="logo-container">
-          
-          <a href="../index.html"><img src="../_static/sail-logo.png"></a>
-          
-
+    
+</ul>
       </div>
-      <div id="project-container">
-        <h1>SAIL Documentation</h1>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
       </div>
-    </header>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
 
-    <div id="content-container">
-
-      <div id="main-content-container">
-        <div id="main-content-header">
-          <h1>sail.tensordot</h1>
-        </div>
-        <div id="main-content">
+    <div class="container-xl">
+      <div class="row">
           
-  <section id="sail-tensordot">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../sail.html">
+   sail
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.expand_dims.html">
+     sail.expand_dims
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.reshape.html">
+     sail.reshape
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.rollaxis.html">
+     sail.rollaxis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.squeeze.html">
+     sail.squeeze
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.transpose.html">
+     sail.transpose
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.add.html">
+     sail.add
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.divide.html">
+     sail.divide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.multiply.html">
+     sail.multiply
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.subtract.html">
+     sail.subtract
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.matmul.html">
+     sail.matmul
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     sail.tensordot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.sum.html">
+     sail.sum
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../tensor.html">
+   sail.Tensor
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.Tensor.numpy.html">
+     sail.Tensor.numpy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.Tensor.grad.html">
+     sail.Tensor.grad
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.Tensor.backward.html">
+     sail.Tensor.backward
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../modules.html">
+   sail.modules
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.modules.Module.html">
+     modules.Module
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.modules.Linear.html">
+     modules.Linear
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="sail-tensordot">
 <h1>sail.tensordot<a class="headerlink" href="#sail-tensordot" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sail.tensordot">
-<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">tensordot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tensor</span><a class="headerlink" href="#sail.tensordot" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">tensordot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a><a class="headerlink" href="#sail.tensordot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes tensor dot product along axes provided</p>
 <p>When axes is array_like as <code class="docutils literal notranslate"><span class="pre">(a_axes,</span> <span class="pre">b_axes)</span></code> then sum the products of
 <cite>a</cite>’s and <cite>b</cite>’s elements over the axis specified in <code class="docutils literal notranslate"><span class="pre">(a_axes,</span> <span class="pre">b_axes)</span></code>.
@@ -71,8 +286,8 @@ If axes is an integer <cite>N</cite>, then the last <cite>N</cite> dimensions of
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<em>Tensor</em>) – A 2D tensor</p></li>
-<li><p><strong>b</strong> (<em>Tensor</em>) – A 2D tensor</p></li>
+<li><p><strong>a</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – A 2D tensor</p></li>
+<li><p><strong>b</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – A 2D tensor</p></li>
 <li><p><strong>axes</strong> (<em>int</em><em> or </em><em>(</em><em>2</em><em>,</em><em>) </em><em>array_like</em>) – Axes to be summed over</p></li>
 </ul>
 </dd>
@@ -100,82 +315,43 @@ If axes is an integer <cite>N</cite>, then the last <cite>N</cite> dimensions of
 </div>
 </dd></dl>
 
-</section>
-
-
-        </div>
-      </div>
-
-      <div id="side-menu-container">
-
-        <div id="search" role="search">
-        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-            <input type="text" name="q" placeholder="Search..." />
-            <input type="hidden" name="check_keywords" value="yes" />
-            <input type="hidden" name="area" value="default" />
-        </form>
 </div>
 
-        <div id="side-menu" role="navigation">
 
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="sail.matmul.html" title="previous page">sail.matmul</a>
+    <a class='right-next' id="next-link" href="sail.sum.html" title="next page">sail.sum</a>
+
+              </div>
+              
+          </main>
           
-  
-    
-  
-  
-    <p class="caption"><span class="caption-text">Notes</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../details/view-or-copy.html">View or Copy</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Python:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../sail.html">SAIL</a></li>
-</ul>
-
-  
-
-
-        </div>
-
-        
 
       </div>
-
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-<footer>
-    <div id="footer-info">
-        <ul id="build-details">
-            
-                <li class="footer-element">
-                    
-                        <a href="../_sources/generated/sail.tensordot.rst.txt" rel="nofollow"> source</a>
-                    
-                </li>
-            
-
-            
-
-            
-        </ul>
-        <div id="credit">
-            created with <a href="http://sphinx-doc.org/">Sphinx</a> and <a href="https://github.com/Autophagy/insegel">Insegel</a>
-
-        </div>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Tucker Siegel.<br/>
+</p>
     </div>
-
-    <a id="menu-toggle" class="fa fa-bars" aria-hidden="true"></a>
-
-    <script type="text/javascript">
-      $("#menu-toggle").click(function() {
-        $("#menu-toggle").toggleClass("toggled");
-        $("#side-menu-container").slideToggle(300);
-      });
-    </script>
-
-</footer> 
-
-</div>
-
-</body>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
 </html>

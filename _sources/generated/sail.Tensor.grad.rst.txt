@@ -1,0 +1,6 @@
+﻿sail.Tensor.grad
+================
+
+.. currentmodule:: sail
+
+.. autoattribute:: Tensor.grad

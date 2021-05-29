@@ -1,224 +1,432 @@
+
 <!DOCTYPE html>
-<head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#2D2D2D" />
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sail &#8212; SAIL  documentation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/sail-favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="sail.expand_dims" href="generated/sail.expand_dims.html" />
+    <link rel="prev" title="SAIL Reference" href="api-reference.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/sail-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
   
-  <title>SAIL :: SAIL</title>
-  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="details/index.html">
+  About
+ </a>
+</li>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="_static/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="_static/img/favicon-16x16.png">
-        <link rel="index" title="Index"
-              href="genindex.html"/>
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="api-reference.html">
+  SAIL Reference
+ </a>
+</li>
 
-  <link rel="stylesheet" href="_static/css/insegel.css"/>
-
-  <script type="text/javascript">
-    var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:'',
-        VERSION:'',
-        LANGUAGE:'None',
-        COLLAPSE_INDEX:false,
-        FILE_SUFFIX:'.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-    };
-  </script>
-    <script type="text/javascript" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-
-  <script src="https://email.tl.fortawesome.com/c/eJxNjUEOgyAQAF8jR7Kw6wIHDh7sP1Cw2mgxgmn6-3JsMqc5zEQfE8dkxOY1KKMUOI3ACFKRJpSW2AAp7ontYIaxI6i7XPJVwyeVfCQ550Os3jLrGSNOLgbdAy6s0PBk2TFNjEbsfq31LB0OnX407pJa5v2faRadwSW63mn5KuLyR9j2tgx3zecanl-55R_-jjPs"></script>
-
-</head>
-
-<body>
-  <div id="insegel-container">
-    <header>
-      <div id="logo-container">
-          
-          <a href="index.html"><img src="_static/sail-logo.png"></a>
-          
-
+    
+</ul>
       </div>
-      <div id="project-container">
-        <h1>SAIL Documentation</h1>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
       </div>
-    </header>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
 
-    <div id="content-container">
-
-      <div id="main-content-container">
-        <div id="main-content-header">
-          <h1>SAIL</h1>
-        </div>
-        <div id="main-content">
+    <div class="container-xl">
+      <div class="row">
           
-  <section id="sail">
-<h1>SAIL<a class="headerlink" href="#sail" title="Permalink to this headline">¶</a></h1>
-<section id="mutation-ops">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   sail
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.expand_dims.html">
+     sail.expand_dims
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.reshape.html">
+     sail.reshape
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.rollaxis.html">
+     sail.rollaxis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.squeeze.html">
+     sail.squeeze
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.transpose.html">
+     sail.transpose
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.add.html">
+     sail.add
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.divide.html">
+     sail.divide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.multiply.html">
+     sail.multiply
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.subtract.html">
+     sail.subtract
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.matmul.html">
+     sail.matmul
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.tensordot.html">
+     sail.tensordot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.sum.html">
+     sail.sum
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="tensor.html">
+   sail.Tensor
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.Tensor.numpy.html">
+     sail.Tensor.numpy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.Tensor.grad.html">
+     sail.Tensor.grad
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.Tensor.backward.html">
+     sail.Tensor.backward
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="modules.html">
+   sail.modules
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.modules.Module.html">
+     modules.Module
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/sail.modules.Linear.html">
+     modules.Linear
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mutation-ops">
+   Mutation Ops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#math-ops">
+   Math Ops
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elementwise">
+     Elementwise
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-algebra">
+     Linear Algebra
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reduction">
+     Reduction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="sail">
+<h1>sail<a class="headerlink" href="#sail" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mutation-ops">
 <h2>Mutation Ops<a class="headerlink" href="#mutation-ops" title="Permalink to this headline">¶</a></h2>
-<table class="longtable docutils align-default">
+<table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><p id="sail.expand_dims"/><a class="reference internal" href="generated/sail.expand_dims.html#sail.expand_dims" title="sail.expand_dims"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expand_dims</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.expand_dims.html#sail.expand_dims" title="sail.expand_dims"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expand_dims</span></code></a>(x, axis)</p></td>
 <td><p>Return a view or copy of x with a dimension inserted at index <code class="docutils literal notranslate"><span class="pre">axis</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><p id="sail.reshape"/><a class="reference internal" href="generated/sail.reshape.html#sail.reshape" title="sail.reshape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reshape</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.reshape.html#sail.reshape" title="sail.reshape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reshape</span></code></a>(x, new_shape)</p></td>
 <td><p>Return a reshaped view or copy of x</p></td>
 </tr>
-<tr class="row-odd"><td><p><p id="sail.rollaxis"/><a class="reference internal" href="generated/sail.rollaxis.html#sail.rollaxis" title="sail.rollaxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rollaxis</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.rollaxis.html#sail.rollaxis" title="sail.rollaxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rollaxis</span></code></a>(x, axis[, position])</p></td>
 <td><p>Return a view or copy of x with a dimension rolled from index <code class="docutils literal notranslate"><span class="pre">axis</span></code> to index <code class="docutils literal notranslate"><span class="pre">position</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><p id="sail.squeeze"/><a class="reference internal" href="generated/sail.squeeze.html#sail.squeeze" title="sail.squeeze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squeeze</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.squeeze.html#sail.squeeze" title="sail.squeeze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squeeze</span></code></a>(x, axis)</p></td>
 <td><p>Return a view or copy of x with a dimension removed at index <code class="docutils literal notranslate"><span class="pre">axis</span></code> The dimension size at index <code class="docutils literal notranslate"><span class="pre">axis</span></code> must be 1.</p></td>
 </tr>
-<tr class="row-odd"><td><p><p id="sail.transpose"/><a class="reference internal" href="generated/sail.transpose.html#sail.transpose" title="sail.transpose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transpose</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.transpose.html#sail.transpose" title="sail.transpose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transpose</span></code></a>(x[, axes])</p></td>
 <td><p>Return a view or copy of x with dimensions reordered to match <code class="docutils literal notranslate"><span class="pre">axes</span></code></p></td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="math-ops">
+</div>
+<div class="section" id="math-ops">
 <h2>Math Ops<a class="headerlink" href="#math-ops" title="Permalink to this headline">¶</a></h2>
-<section id="elementwise">
+<div class="section" id="elementwise">
 <h3>Elementwise<a class="headerlink" href="#elementwise" title="Permalink to this headline">¶</a></h3>
-<table class="longtable docutils align-default">
+<table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><p id="sail.add"/><a class="reference internal" href="generated/sail.add.html#sail.add" title="sail.add"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.add.html#sail.add" title="sail.add"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add</span></code></a>(a, b)</p></td>
 <td><p>Adds two tensors together using elementwise operations</p></td>
 </tr>
-<tr class="row-even"><td><p><p id="sail.divide"/><a class="reference internal" href="generated/sail.divide.html#sail.divide" title="sail.divide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">divide</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.divide.html#sail.divide" title="sail.divide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">divide</span></code></a>(a, b)</p></td>
 <td><p>Divides two tensors together using elementwise operations</p></td>
 </tr>
-<tr class="row-odd"><td><p><p id="sail.multiply"/><a class="reference internal" href="generated/sail.multiply.html#sail.multiply" title="sail.multiply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiply</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.multiply.html#sail.multiply" title="sail.multiply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiply</span></code></a>(a, b)</p></td>
 <td><p>Multiplies two tensors together using elementwise operations</p></td>
 </tr>
-<tr class="row-even"><td><p><p id="sail.subtract"/><a class="reference internal" href="generated/sail.subtract.html#sail.subtract" title="sail.subtract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subtract</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.subtract.html#sail.subtract" title="sail.subtract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subtract</span></code></a>(a, b)</p></td>
 <td><p>Subtracts two tensors together using elementwise operations</p></td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="linear-algebra">
+</div>
+<div class="section" id="linear-algebra">
 <h3>Linear Algebra<a class="headerlink" href="#linear-algebra" title="Permalink to this headline">¶</a></h3>
-<table class="longtable docutils align-default">
+<table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><p id="sail.matmul"/><a class="reference internal" href="generated/sail.matmul.html#sail.matmul" title="sail.matmul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matmul</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.matmul.html#sail.matmul" title="sail.matmul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matmul</span></code></a>(a, b)</p></td>
 <td><p>Runs matrix multiplication across two 2D tensors</p></td>
 </tr>
-<tr class="row-even"><td><p><p id="sail.tensordot"/><a class="reference internal" href="generated/sail.tensordot.html#sail.tensordot" title="sail.tensordot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tensordot</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.tensordot.html#sail.tensordot" title="sail.tensordot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tensordot</span></code></a>(a, b[, axes])</p></td>
 <td><p>Computes tensor dot product along axes provided</p></td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="reduction">
+</div>
+<div class="section" id="reduction">
 <h3>Reduction<a class="headerlink" href="#reduction" title="Permalink to this headline">¶</a></h3>
-<table class="longtable docutils align-default">
+<table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><p id="sail.sum"/><a class="reference internal" href="generated/sail.sum.html#sail.sum" title="sail.sum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sum</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.sum.html#sail.sum" title="sail.sum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sum</span></code></a>(x)</p></td>
 <td><p>Sums tensor across all axis.</p></td>
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-</section>
-
-
-        </div>
-      </div>
-
-      <div id="side-menu-container">
-
-        <div id="search" role="search">
-        <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-            <input type="text" name="q" placeholder="Search..." />
-            <input type="hidden" name="check_keywords" value="yes" />
-            <input type="hidden" name="area" value="default" />
-        </form>
+</div>
+</div>
 </div>
 
-        <div id="side-menu" role="navigation">
 
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="api-reference.html" title="previous page">SAIL Reference</a>
+    <a class='right-next' id="next-link" href="generated/sail.expand_dims.html" title="next page">sail.expand_dims</a>
+
+              </div>
+              
+          </main>
           
-  
-    
-  
-  
-    <p class="caption"><span class="caption-text">Notes</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="details/view-or-copy.html">View or Copy</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Python:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">SAIL</a></li>
-</ul>
-
-  
-
-
-        </div>
-
-        
 
       </div>
-
     </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-<footer>
-    <div id="footer-info">
-        <ul id="build-details">
-            
-                <li class="footer-element">
-                    
-                        <a href="_sources/sail.rst.txt" rel="nofollow"> source</a>
-                    
-                </li>
-            
-
-            
-
-            
-        </ul>
-        <div id="credit">
-            created with <a href="http://sphinx-doc.org/">Sphinx</a> and <a href="https://github.com/Autophagy/insegel">Insegel</a>
-
-        </div>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Tucker Siegel.<br/>
+</p>
     </div>
-
-    <a id="menu-toggle" class="fa fa-bars" aria-hidden="true"></a>
-
-    <script type="text/javascript">
-      $("#menu-toggle").click(function() {
-        $("#menu-toggle").toggleClass("toggled");
-        $("#side-menu-container").slideToggle(300);
-      });
-    </script>
-
-</footer> 
-
-</div>
-
-</body>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
 </html>

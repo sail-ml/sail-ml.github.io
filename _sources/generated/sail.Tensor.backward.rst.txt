@@ -1,0 +1,6 @@
+﻿sail.Tensor.backward
+====================
+
+.. currentmodule:: sail
+
+.. automethod:: Tensor.backward
