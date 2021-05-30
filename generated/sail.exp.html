@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sail.rollaxis &#8212; SAIL  documentation</title>
+    <title>sail.exp &#8212; SAIL  documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -31,11 +31,12 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sail.squeeze" href="sail.squeeze.html" />
-    <link rel="prev" title="sail.reshape" href="sail.reshape.html" />
+    <link rel="next" title="sail.matmul" href="sail.matmul.html" />
+    <link rel="prev" title="sail.power" href="sail.power.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -136,8 +137,8 @@
      sail.reshape
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="sail.rollaxis.html">
      sail.rollaxis
     </a>
    </li>
@@ -176,8 +177,8 @@
      sail.power
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.exp.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      sail.exp
     </a>
    </li>
@@ -283,28 +284,22 @@
               
               <div>
                 
-  <div class="section" id="sail-rollaxis">
-<h1>sail.rollaxis<a class="headerlink" href="#sail-rollaxis" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="sail-exp">
+<h1>sail.exp<a class="headerlink" href="#sail-exp" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="sail.rollaxis">
-<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">rollaxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a><a class="headerlink" href="#sail.rollaxis" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a view or copy of x with a dimension rolled from index <code class="docutils literal notranslate"><span class="pre">axis</span></code> to index <code class="docutils literal notranslate"><span class="pre">position</span></code></p>
+<dt class="sig sig-object py" id="sail.exp">
+<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">power</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a><a class="headerlink" href="#sail.exp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raises E to Tensor <code class="docutils literal notranslate"><span class="pre">power</span></code></p>
+<div class="math notranslate nohighlight">
+\[\text{out} = \text{e}^{\text{power}}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – A tensor</p></li>
-<li><p><strong>axis</strong> (<em>int</em>) – Index to move</p></li>
-<li><p><strong>position</strong> (<em>int</em>) – Index to move <code class="docutils literal notranslate"><span class="pre">axis</span></code> to</p></li>
-</ul>
+<dd class="field-odd"><p><strong>power</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – Tensor power</p>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<p>Please reference <a class="reference internal" href="../details/view-or-copy.html#view-or-copy"><span class="std std-ref">View or Copy</span></a> to understand the view and copy semantics of mutation ops.</p>
 <p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">rollaxis</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="o">.</span><span class="n">shape</span>
-<span class="go">(3, 1, 2, 4, 5)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">power</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">power</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -317,8 +312,8 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="sail.reshape.html" title="previous page">sail.reshape</a>
-    <a class='right-next' id="next-link" href="sail.squeeze.html" title="next page">sail.squeeze</a>
+    <a class='left-prev' id="prev-link" href="sail.power.html" title="previous page">sail.power</a>
+    <a class='right-next' id="next-link" href="sail.matmul.html" title="next page">sail.matmul</a>
 
               </div>
               

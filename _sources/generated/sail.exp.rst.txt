@@ -1,0 +1,6 @@
+﻿sail.exp
+========
+
+.. currentmodule:: sail
+
+.. autofunction:: exp

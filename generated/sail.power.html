@@ -35,7 +35,7 @@
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sail.matmul" href="sail.matmul.html" />
+    <link rel="next" title="sail.exp" href="sail.exp.html" />
     <link rel="prev" title="sail.subtract" href="sail.subtract.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -178,6 +178,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="sail.exp.html">
+     sail.exp
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="sail.matmul.html">
      sail.matmul
     </a>
@@ -300,7 +305,7 @@
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">base</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">power</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">power</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -314,7 +319,7 @@
               <div class='prev-next-bottom'>
                 
     <a class='left-prev' id="prev-link" href="sail.subtract.html" title="previous page">sail.subtract</a>
-    <a class='right-next' id="next-link" href="sail.matmul.html" title="next page">sail.matmul</a>
+    <a class='right-next' id="next-link" href="sail.exp.html" title="next page">sail.exp</a>
 
               </div>
               
