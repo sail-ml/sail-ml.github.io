@@ -1,0 +1,6 @@
+﻿sail.power
+==========
+
+.. currentmodule:: sail
+
+.. autofunction:: power
