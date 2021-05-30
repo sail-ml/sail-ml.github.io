@@ -227,12 +227,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="sail.modules.Module.html">
-     modules.Module
+     Module
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="sail.modules.Linear.html">
-     modules.Linear
+     Linear
     </a>
    </li>
   </ul>
@@ -278,7 +278,28 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sail.Tensor.grad">
 <span class="sig-prename descclassname"><span class="pre">Tensor.</span></span><span class="sig-name descname"><span class="pre">grad</span></span><a class="headerlink" href="#sail.Tensor.grad" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns the tensor’s gradient</p>
+<p>If the tensor does not have a gradient or <code class="docutils literal notranslate"><span class="pre">requires_grad</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>,
+then <code class="docutils literal notranslate"><span class="pre">sail.Tensor.grad</span></code> will return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">requires_grad</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">requires_grad</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">grad</span>
+<span class="go">tensor([[1. 1. 1. 1.]</span>
+<span class="go">        [1. 1. 1. 1.]</span>
+<span class="go">        [1. 1. 1. 1.]], shape=(3, 4))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">grad</span>
+<span class="go">tensor([[1. 1. 1. 1.]</span>
+<span class="go">        [1. 1. 1. 1.]</span>
+<span class="go">        [1. 1. 1. 1.]], shape=(3, 4))</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </div>
 

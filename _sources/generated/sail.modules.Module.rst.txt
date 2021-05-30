@@ -1,12 +1,12 @@
 ﻿.. role:: hidden
     :class: hidden-section
-.. currentmodule:: sail
+.. currentmodule:: sail.modules
 
 
-modules.Module
-==============
+Module
+======
 
-.. autoclass:: modules.Module
+.. autoclass:: Module
     :members:
 
 

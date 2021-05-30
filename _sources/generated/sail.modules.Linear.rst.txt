@@ -1,18 +1,18 @@
 ﻿.. role:: hidden
     :class: hidden-section
-.. currentmodule:: sail
+.. currentmodule:: sail.modules
 
 
-modules.Linear
-==============
+Linear
+======
 
-.. autoclass:: modules.Linear
+.. autoclass:: Linear
     :members:
     :exclude-members: forward
 
     .. note::
-        modules.Linear is a subclass of :class:`Module`. See :class:`Module` to find the base
-        functions which are implemented in modules.Linear.
+        Linear is a subclass of :class:`Module`. See :class:`Module` to find the base
+        functions which are implemented in Linear.
 
 
 ..
