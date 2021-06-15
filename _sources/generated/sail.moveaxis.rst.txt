@@ -1,0 +1,6 @@
+﻿sail.moveaxis
+=============
+
+.. currentmodule:: sail
+
+.. autofunction:: moveaxis

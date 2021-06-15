@@ -35,8 +35,8 @@
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sail.exp" href="sail.exp.html" />
-    <link rel="prev" title="sail.subtract" href="sail.subtract.html" />
+    <link rel="next" title="sail.subtract" href="sail.subtract.html" />
+    <link rel="prev" title="sail.multiply" href="sail.multiply.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -92,6 +92,12 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/sail-ml/sail" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
       </ul>
       </div>
       
@@ -117,136 +123,30 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="reference internal" href="../sail.html">
    sail
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.expand_dims.html">
-     sail.expand_dims
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.reshape.html">
-     sail.reshape
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.rollaxis.html">
-     sail.rollaxis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.squeeze.html">
-     sail.squeeze
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.transpose.html">
-     sail.transpose
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.add.html">
-     sail.add
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.divide.html">
-     sail.divide
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.multiply.html">
-     sail.multiply
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.subtract.html">
-     sail.subtract
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     sail.power
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.exp.html">
-     sail.exp
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.matmul.html">
-     sail.matmul
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.tensordot.html">
-     sail.tensordot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.sum.html">
-     sail.sum
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../tensor.html">
    sail.Tensor
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.Tensor.numpy.html">
-     sail.Tensor.numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.Tensor.grad.html">
-     sail.Tensor.grad
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.Tensor.backward.html">
-     sail.Tensor.backward
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../modules.html">
    sail.modules
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.modules.Module.html">
-     Module
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.modules.Linear.html">
-     Linear
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../losses.html">
+   sail.losses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../optimizers.html">
+   sail.optimizers
+  </a>
  </li>
 </ul>
 
@@ -288,24 +188,26 @@
 <h1>sail.power<a class="headerlink" href="#sail-power" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sail.power">
-<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">power</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a><a class="headerlink" href="#sail.power" title="Permalink to this definition">¶</a></dt>
-<dd><p>Raises Tensor <code class="docutils literal notranslate"><span class="pre">base</span></code> to Tensor <code class="docutils literal notranslate"><span class="pre">power</span></code></p>
+<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">power</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponent</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a><a class="headerlink" href="#sail.power" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Tensor <cite>base</cite> raised to power of Tensor <cite>exponent</cite>.</p>
 <div class="math notranslate nohighlight">
 \[\text{out} = \text{base}^{\text{power}}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If tensor shapes do not match, they must be broadcastable to a common shape.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>base</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – Tensor base for power</p></li>
-<li><p><strong>power</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – Tensor power</p></li>
+<li><p><strong>base</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – Base</p></li>
+<li><p><strong>exppnent</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – Exponent</p></li>
 </ul>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<p>If tensor shapes do not match, they must be broadcastable to a common shape.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">base</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">power</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">power</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exponent</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">exponent</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -318,8 +220,8 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="sail.subtract.html" title="previous page">sail.subtract</a>
-    <a class='right-next' id="next-link" href="sail.exp.html" title="next page">sail.exp</a>
+    <a class='left-prev' id="prev-link" href="sail.multiply.html" title="previous page">sail.multiply</a>
+    <a class='right-next' id="next-link" href="sail.subtract.html" title="next page">sail.subtract</a>
 
               </div>
               

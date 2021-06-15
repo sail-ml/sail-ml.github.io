@@ -34,8 +34,6 @@
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sail.add" href="sail.add.html" />
-    <link rel="prev" title="sail.squeeze" href="sail.squeeze.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -75,7 +73,7 @@
  </a>
 </li>
 
-<li class="toctree-l1 current active nav-item">
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../api-reference.html">
   SAIL Reference
  </a>
@@ -91,6 +89,12 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/sail-ml/sail" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
       </ul>
       </div>
       
@@ -110,145 +114,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption">
- <span class="caption-text">
-  Python:
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../sail.html">
-   sail
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.expand_dims.html">
-     sail.expand_dims
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.reshape.html">
-     sail.reshape
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.rollaxis.html">
-     sail.rollaxis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.squeeze.html">
-     sail.squeeze
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     sail.transpose
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.add.html">
-     sail.add
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.divide.html">
-     sail.divide
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.multiply.html">
-     sail.multiply
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.subtract.html">
-     sail.subtract
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.power.html">
-     sail.power
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.exp.html">
-     sail.exp
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.matmul.html">
-     sail.matmul
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.tensordot.html">
-     sail.tensordot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.sum.html">
-     sail.sum
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../tensor.html">
-   sail.Tensor
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.Tensor.numpy.html">
-     sail.Tensor.numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.Tensor.grad.html">
-     sail.Tensor.grad
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.Tensor.backward.html">
-     sail.Tensor.backward
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../modules.html">
-   sail.modules
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.modules.Module.html">
-     Module
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.modules.Linear.html">
-     Linear
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
+    
   </div>
 </nav>
             </div>
@@ -287,18 +153,20 @@
 <h1>sail.transpose<a class="headerlink" href="#sail-transpose" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sail.transpose">
-<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">transpose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a><a class="headerlink" href="#sail.transpose" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a view or copy of x with dimensions reordered to match <code class="docutils literal notranslate"><span class="pre">axes</span></code></p>
+<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">transpose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a><a class="headerlink" href="#sail.transpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a view or copy of <cite>tensor</cite> with dimensions reordered to match <cite>axes</cite></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please reference <a class="reference internal" href="../details/view-or-copy.html#view-or-copy"><span class="std std-ref">View or Copy</span></a> to understand the view and copy semantics of mutation ops.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – A tensor</p></li>
-<li><p><strong>axis</strong> (<em>tuple of ints</em>) – New order of axes</p></li>
+<li><p><strong>tensor</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – Input tensor</p></li>
+<li><p><strong>axis</strong> (<em>(</em><em>tuple of ints</em><em>)</em>) – New order of axes</p></li>
 </ul>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<p>Please reference <a class="reference internal" href="../details/view-or-copy.html#view-or-copy"><span class="std std-ref">View or Copy</span></a> to understand the view and copy semantics of mutation ops.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
@@ -316,8 +184,6 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="sail.squeeze.html" title="previous page">sail.squeeze</a>
-    <a class='right-next' id="next-link" href="sail.add.html" title="next page">sail.add</a>
 
               </div>
               

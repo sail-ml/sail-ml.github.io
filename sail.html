@@ -34,7 +34,7 @@
     <link rel="shortcut icon" href="_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="sail.expand_dims" href="generated/sail.expand_dims.html" />
+    <link rel="next" title="sail.random.normal" href="generated/sail.random.normal.html" />
     <link rel="prev" title="SAIL Reference" href="api-reference.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -91,6 +91,12 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/sail-ml/sail" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
       </ul>
       </div>
       
@@ -116,136 +122,30 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    sail
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.expand_dims.html">
-     sail.expand_dims
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.reshape.html">
-     sail.reshape
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.rollaxis.html">
-     sail.rollaxis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.squeeze.html">
-     sail.squeeze
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.transpose.html">
-     sail.transpose
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.add.html">
-     sail.add
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.divide.html">
-     sail.divide
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.multiply.html">
-     sail.multiply
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.subtract.html">
-     sail.subtract
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.power.html">
-     sail.power
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.exp.html">
-     sail.exp
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.matmul.html">
-     sail.matmul
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.tensordot.html">
-     sail.tensordot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.sum.html">
-     sail.sum
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="tensor.html">
    sail.Tensor
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.Tensor.numpy.html">
-     sail.Tensor.numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.Tensor.grad.html">
-     sail.Tensor.grad
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.Tensor.backward.html">
-     sail.Tensor.backward
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="modules.html">
    sail.modules
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.modules.Module.html">
-     Module
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="generated/sail.modules.Linear.html">
-     Linear
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="losses.html">
+   sail.losses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="optimizers.html">
+   sail.optimizers
+  </a>
  </li>
 </ul>
 
@@ -268,6 +168,18 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#factories">
+   Factories
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#random">
+     Random
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mutation-ops">
    Mutation Ops
   </a>
@@ -280,6 +192,11 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#elementwise">
      Elementwise
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unary">
+     Unary
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -317,6 +234,32 @@
                 
   <div class="section" id="sail">
 <h1>sail<a class="headerlink" href="#sail" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="factories">
+<h2>Factories<a class="headerlink" href="#factories" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="random">
+<h3>Random<a class="headerlink" href="#random" title="Permalink to this headline">¶</a></h3>
+<table class="longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.random.normal.html#sail.random.normal" title="sail.random.normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random.normal</span></code></a>([mean, std, shape])</p></td>
+<td><p>Returns tensor with the data randomly sampled from a normal distribution</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.random.normal_like.html#sail.random.normal_like" title="sail.random.normal_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random.normal_like</span></code></a>(tensor[, mean, std])</p></td>
+<td><p>Returns tensor with the data randomly sampled from a normal distribution, matching the shape and dtype of <cite>tensor</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.random.uniform.html#sail.random.uniform" title="sail.random.uniform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random.uniform</span></code></a>([min, max, shape])</p></td>
+<td><p>Returns tensor with the data randomly sampled from a uniform distribution <code class="docutils literal notranslate"><span class="pre">[min,</span> <span class="pre">max)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.random.uniform_like.html#sail.random.uniform_like" title="sail.random.uniform_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random.uniform_like</span></code></a>(tensor[, min, max])</p></td>
+<td><p>Returns tensor with the data randomly sampled from a uniform distribution <code class="docutils literal notranslate"><span class="pre">[min,</span> <span class="pre">max)</span></code>, matching the shape and dtype of <cite>tensor</cite></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="section" id="mutation-ops">
 <h2>Mutation Ops<a class="headerlink" href="#mutation-ops" title="Permalink to this headline">¶</a></h2>
 <table class="longtable table autosummary">
@@ -325,20 +268,26 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.expand_dims.html#sail.expand_dims" title="sail.expand_dims"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expand_dims</span></code></a>(x, axis)</p></td>
-<td><p>Return a view or copy of x with a dimension inserted at index <code class="docutils literal notranslate"><span class="pre">axis</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.broadcast_to.html#sail.broadcast_to" title="sail.broadcast_to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">broadcast_to</span></code></a>(tensor, shape)</p></td>
+<td><p>Returns a broadcasted view of <cite>tensor</cite></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.reshape.html#sail.reshape" title="sail.reshape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reshape</span></code></a>(x, new_shape)</p></td>
-<td><p>Return a reshaped view or copy of x</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.expand_dims.html#sail.expand_dims" title="sail.expand_dims"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expand_dims</span></code></a>(tensor, axis)</p></td>
+<td><p>Returns a view or copy of <cite>tensor</cite> with a dimension inserted at index <cite>axis</cite></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.rollaxis.html#sail.rollaxis" title="sail.rollaxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rollaxis</span></code></a>(x, axis[, position])</p></td>
-<td><p>Return a view or copy of x with a dimension rolled from index <code class="docutils literal notranslate"><span class="pre">axis</span></code> to index <code class="docutils literal notranslate"><span class="pre">position</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.moveaxis.html#sail.moveaxis" title="sail.moveaxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">moveaxis</span></code></a>(tensor, axis[, position])</p></td>
+<td><p>Returns a view or copy of <cite>tensor</cite> with a dimension moved from index <cite>axis</cite> to index <cite>position</cite></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.squeeze.html#sail.squeeze" title="sail.squeeze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squeeze</span></code></a>(x, axis)</p></td>
-<td><p>Return a view or copy of x with a dimension removed at index <code class="docutils literal notranslate"><span class="pre">axis</span></code> The dimension size at index <code class="docutils literal notranslate"><span class="pre">axis</span></code> must be 1.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.reshape.html#sail.reshape" title="sail.reshape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reshape</span></code></a>(tensor, shape)</p></td>
+<td><p>Returns a reshaped view or copy of <cite>tensor</cite></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.transpose.html#sail.transpose" title="sail.transpose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transpose</span></code></a>(x[, axes])</p></td>
-<td><p>Return a view or copy of x with dimensions reordered to match <code class="docutils literal notranslate"><span class="pre">axes</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.rollaxis.html#sail.rollaxis" title="sail.rollaxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rollaxis</span></code></a>(tensor, axis[, position])</p></td>
+<td><p>Returns a view or copy of <cite>tensor</cite> with a dimension rolled from index <cite>axis</cite> to index <cite>position</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.squeeze.html#sail.squeeze" title="sail.squeeze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squeeze</span></code></a>(tensor, axis)</p></td>
+<td><p>Returns a view or copy of <cite>tensor</cite> with a dimension removed at index <cite>axis</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.transpose.html#sail.transpose" title="sail.transpose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transpose</span></code></a>(tensor, axes)</p></td>
+<td><p>Returns a view or copy of <cite>tensor</cite> with dimensions reordered to match <cite>axes</cite></p></td>
 </tr>
 </tbody>
 </table>
@@ -353,23 +302,37 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.add.html#sail.add" title="sail.add"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add</span></code></a>(a, b)</p></td>
-<td><p>Adds two tensors together using elementwise operations</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.add.html#sail.add" title="sail.add"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add</span></code></a>(x1, x2)</p></td>
+<td><p>Returns the elementwise addition of Tensors <cite>x1</cite> and <cite>x2</cite></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.divide.html#sail.divide" title="sail.divide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">divide</span></code></a>(a, b)</p></td>
-<td><p>Divides two tensors together using elementwise operations</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.divide.html#sail.divide" title="sail.divide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">divide</span></code></a>(x1, x2)</p></td>
+<td><p>Returns the elementwise division of Tensor <cite>x1</cite> by <cite>x2</cite></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.multiply.html#sail.multiply" title="sail.multiply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiply</span></code></a>(a, b)</p></td>
-<td><p>Multiplies two tensors together using elementwise operations</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.multiply.html#sail.multiply" title="sail.multiply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiply</span></code></a>(x1, x2)</p></td>
+<td><p>Returns the elementwise multiplication of Tensors <cite>x1</cite> and <cite>x2</cite></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.subtract.html#sail.subtract" title="sail.subtract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subtract</span></code></a>(a, b)</p></td>
-<td><p>Subtracts two tensors together using elementwise operations</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.power.html#sail.power" title="sail.power"><code class="xref py py-obj docutils literal notranslate"><span class="pre">power</span></code></a>(base, exponent)</p></td>
+<td><p>Returns Tensor <cite>base</cite> raised to power of Tensor <cite>exponent</cite>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.power.html#sail.power" title="sail.power"><code class="xref py py-obj docutils literal notranslate"><span class="pre">power</span></code></a>(base, power)</p></td>
-<td><p>Raises Tensor <code class="docutils literal notranslate"><span class="pre">base</span></code> to Tensor <code class="docutils literal notranslate"><span class="pre">power</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.subtract.html#sail.subtract" title="sail.subtract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subtract</span></code></a>(x1, x2)</p></td>
+<td><p>Returns the elementwise subtraction of Tensor <cite>x2</cite> from <cite>x1</cite></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.exp.html#sail.exp" title="sail.exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exp</span></code></a>(power)</p></td>
-<td><p>Raises E to Tensor <code class="docutils literal notranslate"><span class="pre">power</span></code></p></td>
+</tbody>
+</table>
+</div>
+<div class="section" id="unary">
+<h3>Unary<a class="headerlink" href="#unary" title="Permalink to this headline">¶</a></h3>
+<table class="longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.exp.html#sail.exp" title="sail.exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exp</span></code></a>(tensor)</p></td>
+<td><p>Returns e the power <cite>tensor</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.log.html#sail.log" title="sail.log"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log</span></code></a>(tensor)</p></td>
+<td><p>Returns natural log of <cite>tensor</cite></p></td>
 </tr>
 </tbody>
 </table>
@@ -382,11 +345,11 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.matmul.html#sail.matmul" title="sail.matmul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matmul</span></code></a>(a, b)</p></td>
-<td><p>Runs matrix multiplication across two 2D tensors</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.matmul.html#sail.matmul" title="sail.matmul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matmul</span></code></a>(x1, x2)</p></td>
+<td><p>Returns the matrix multiplication of <cite>x1</cite> and <cite>x2</cite></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.tensordot.html#sail.tensordot" title="sail.tensordot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tensordot</span></code></a>(a, b[, axes])</p></td>
-<td><p>Computes tensor dot product along axes provided</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.tensordot.html#sail.tensordot" title="sail.tensordot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tensordot</span></code></a>(x1, x2[, axes])</p></td>
+<td><p>Returns the tensor dot product along axes provided</p></td>
 </tr>
 </tbody>
 </table>
@@ -399,8 +362,14 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.sum.html#sail.sum" title="sail.sum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sum</span></code></a>(x)</p></td>
-<td><p>Sums tensor across all axis.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.max.html#sail.max" title="sail.max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max</span></code></a>(tensor[, axis, keepdims])</p></td>
+<td><p>Returns the maximum of <cite>tensor</cite> over specified axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.mean.html#sail.mean" title="sail.mean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean</span></code></a>(tensor[, axis, keepdims])</p></td>
+<td><p>Returns the mean of <cite>tensor</cite> over specified axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.sum.html#sail.sum" title="sail.sum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sum</span></code></a>(tensor[, axis, keepdims])</p></td>
+<td><p>Returns the sum of <cite>tensor</cite> over specified axis.</p></td>
 </tr>
 </tbody>
 </table>
@@ -415,7 +384,7 @@
               <div class='prev-next-bottom'>
                 
     <a class='left-prev' id="prev-link" href="api-reference.html" title="previous page">SAIL Reference</a>
-    <a class='right-next' id="next-link" href="generated/sail.expand_dims.html" title="next page">sail.expand_dims</a>
+    <a class='right-next' id="next-link" href="generated/sail.random.normal.html" title="next page">sail.random.normal</a>
 
               </div>
               

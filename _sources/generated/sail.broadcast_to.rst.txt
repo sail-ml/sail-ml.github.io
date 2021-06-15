@@ -1,0 +1,6 @@
+﻿sail.broadcast\_to
+==================
+
+.. currentmodule:: sail
+
+.. autofunction:: broadcast_to

@@ -1,0 +1,6 @@
+﻿sail.mean
+=========
+
+.. currentmodule:: sail
+
+.. autofunction:: mean

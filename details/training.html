@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAIL Model Training &#8212; SAIL  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="View or Copy" href="view-or-copy.html" />
+    <link rel="prev" title="About" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/sail-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  About
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api-reference.html">
+  SAIL Reference
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/sail-ml/sail" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   SAIL Model Training
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="view-or-copy.html">
+   View or Copy
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-defintion">
+   Model Defintion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimizer">
+   Optimizer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#training-loop">
+   Training Loop
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="sail-model-training">
+<span id="training"></span><h1>SAIL Model Training<a class="headerlink" href="#sail-model-training" title="Permalink to this headline">¶</a></h1>
+<p>Building models in SAIL is super simple. There are 3 basic building blocks to creating a model:</p>
+<ul class="simple">
+<li><p>Model Defintion</p></li>
+<li><p>Optimizer</p></li>
+<li><p>Training Loop</p></li>
+</ul>
+<p>Lets look at these 3 blocks in more depth</p>
+<div class="section" id="model-defintion">
+<h2>Model Defintion<a class="headerlink" href="#model-defintion" title="Permalink to this headline">¶</a></h2>
+<p>SAIL’s custom models are built by subclassing the <code class="docutils literal notranslate"><span class="pre">sail.modules.Module</span></code> class. This class allows you to worry about only one thing: defining your model.
+Things like parameter registration are handled by the parent module, so you don’t have to worry about that at all.</p>
+<p>Here is a simple example.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyModel</span><span class="p">(</span><span class="n">sail</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">linear1</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigmoid</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">Sigmoid</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linear2</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear2</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>That’s it. This is a simple model that takes an input, passes it through a linear layer, then a sigmoid layer, then another linear layer. But under the hood,
+there is far more happening. When a <code class="docutils literal notranslate"><span class="pre">sail.modules.Module</span></code> is subclassed, when instantiated, every attribute is checked to see if it is a module. If it is,
+then the parameters are extracted from that module and stored in the parent module’s internal parameter tracker. We will see how that is used in the next section,
+but essentially, that is how we are allowed to use subclassing as the basis for model building.</p>
+</div>
+<div class="section" id="optimizer">
+<h2>Optimizer<a class="headerlink" href="#optimizer" title="Permalink to this headline">¶</a></h2>
+<p>So we have defined our module, now we need to attach it to an optimizer. Using simple Stochastic Gradient Descent, lets see what that would look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">MyModel</span><span class="p">()</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="mf">1e-4</span><span class="p">)</span> <span class="c1"># 1e-4 is our learning rate</span>
+
+<span class="n">optimizer</span><span class="o">.</span><span class="n">track_module</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Simple right? Before we get an understanding of what is happening, lets see what the full code would look like without subclassing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">linear1</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+<span class="n">sigmoid</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">Sigmoid</span><span class="p">()</span>
+<span class="n">linear2</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">linear1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">linear2</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y</span>
+
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="mf">1e-4</span><span class="p">)</span> <span class="c1"># 1e-4 is our learning rate</span>
+
+<span class="n">optimizer</span><span class="o">.</span><span class="n">track_module</span><span class="p">(</span><span class="n">linear1</span><span class="p">)</span>
+<span class="n">optimizer</span><span class="o">.</span><span class="n">track_module</span><span class="p">(</span><span class="n">linear2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See how we would have to track each individual layer (with the exception of Sigmoid because it does not contain any parameters)?
+Imagine how cumbersome that would be with a large model. That is the power of subclassing. Since parameters get rolled into a global
+parameter store, we no longer have to worry about attaching each individual layer, we just attach the model itself.</p>
+</div>
+<div class="section" id="training-loop">
+<h2>Training Loop<a class="headerlink" href="#training-loop" title="Permalink to this headline">¶</a></h2>
+<p>Time to actually train the model! First, we need a loss function. Let’s just use <code class="docutils literal notranslate"><span class="pre">sail.losses.MeanSquaredError</span></code>.
+Here is the training code, and below is a description:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">loss_fcn</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">MeanSquaredError</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
+
+    <span class="o">//</span> <span class="n">shuffle</span> <span class="n">data</span> <span class="n">here</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span>
+
+    <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">batch_size</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">end</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_data</span><span class="p">)):</span>
+
+        <span class="n">batch_x</span> <span class="o">=</span> <span class="n">input_data</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+        <span class="n">batch_y</span> <span class="o">=</span> <span class="n">targets</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+
+        <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">batch_x</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">loss_fcn</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">batch_y</span><span class="p">)</span>
+        <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>There it is! The way the works is simple. First, we create the loss function, then go into a loop for the number of epochs. We then iterate over every batch.
+Once we extract a batch, we feed it through the model. This creates the graph that is then used for calculating gradients. We calculate the loss, then propogate
+that error back through the grad using <code class="docutils literal notranslate"><span class="pre">loss.backward()</span></code>. Finally, we call <code class="docutils literal notranslate"><span class="pre">optimizer.update()</span></code> to update all the parameters registered to the optimizer.</p>
+<p>To see more examples, please checkout the examples on <a class="reference external" href="https://github.com/sail-ml/sail/tree/master/examples/">github</a></p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">About</a>
+    <a class='right-next' id="next-link" href="view-or-copy.html" title="next page">View or Copy</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Tucker Siegel.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

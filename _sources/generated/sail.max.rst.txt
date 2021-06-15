@@ -1,0 +1,6 @@
+﻿sail.max
+========
+
+.. currentmodule:: sail
+
+.. autofunction:: max

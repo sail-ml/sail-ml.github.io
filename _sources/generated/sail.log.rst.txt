@@ -1,0 +1,6 @@
+﻿sail.log
+========
+
+.. currentmodule:: sail
+
+.. autofunction:: log

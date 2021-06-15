@@ -89,6 +89,12 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/sail-ml/sail" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
       </ul>
       </div>
       
@@ -142,10 +148,12 @@
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
  | <a href="#W"><strong>W</strong></a>
  
 </div>
@@ -165,6 +173,8 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/sail.modules.Linear.html#sail.modules.Linear.bias">bias (sail.modules.Linear attribute)</a>
+</li>
+      <li><a href="generated/sail.broadcast_to.html#sail.broadcast_to">broadcast_to() (in module sail)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -192,8 +202,12 @@
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="generated/sail.modules.Module.html#sail.modules.Module.forward">forward() (sail.modules.Module method)</a>
+      <li><a href="generated/sail.losses.Loss.html#sail.losses.Loss.forward">forward() (sail.losses.Loss method)</a>
+
+      <ul>
+        <li><a href="generated/sail.modules.Module.html#sail.modules.Module.forward">(sail.modules.Module method)</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -211,6 +225,12 @@
       <li><a href="generated/sail.modules.Linear.html#sail.modules.Linear">Linear (class in sail.modules)</a>
 </li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/sail.log.html#sail.log">log() (in module sail)</a>
+</li>
+      <li><a href="generated/sail.losses.Loss.html#sail.losses.Loss">Loss (class in sail.losses)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="M">M</h2>
@@ -218,9 +238,15 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/sail.matmul.html#sail.matmul">matmul() (in module sail)</a>
 </li>
+      <li><a href="generated/sail.max.html#sail.max">max() (in module sail)</a>
+</li>
+      <li><a href="generated/sail.mean.html#sail.mean">mean() (in module sail)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/sail.modules.Module.html#sail.modules.Module">Module (class in sail.modules)</a>
+</li>
+      <li><a href="generated/sail.moveaxis.html#sail.moveaxis">moveaxis() (in module sail)</a>
 </li>
       <li><a href="generated/sail.multiply.html#sail.multiply">multiply() (in module sail)</a>
 </li>
@@ -232,9 +258,21 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="tensor.html#sail.Tensor.ndim">ndim (sail.Tensor attribute)</a>
 </li>
+      <li><a href="generated/sail.random.normal.html#sail.random.normal">normal() (in module sail.random)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/sail.random.normal_like.html#sail.random.normal_like">normal_like() (in module sail.random)</a>
+</li>
       <li><a href="generated/sail.Tensor.numpy.html#sail.Tensor.numpy">numpy() (sail.Tensor method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/sail.optimizers.Optimizer.html#sail.optimizers.Optimizer">Optimizer (class in sail.optimizers)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -264,12 +302,20 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/sail.optimizers.SGD.html#sail.optimizers.SGD">SGD (class in sail.optimizers)</a>
+</li>
       <li><a href="tensor.html#sail.Tensor.shape">shape (sail.Tensor attribute)</a>
 </li>
-      <li><a href="generated/sail.squeeze.html#sail.squeeze">squeeze() (in module sail)</a>
+      <li><a href="generated/sail.modules.Sigmoid.html#sail.modules.Sigmoid">Sigmoid (class in sail.modules)</a>
+</li>
+      <li><a href="generated/sail.modules.Softmax.html#sail.modules.Softmax">Softmax (class in sail.modules)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/sail.losses.SoftmaxCrossEntropy.html#sail.losses.SoftmaxCrossEntropy">SoftmaxCrossEntropy (class in sail.losses)</a>
+</li>
+      <li><a href="generated/sail.squeeze.html#sail.squeeze">squeeze() (in module sail)</a>
+</li>
       <li><a href="generated/sail.subtract.html#sail.subtract">subtract() (in module sail)</a>
 </li>
       <li><a href="generated/sail.sum.html#sail.sum">sum() (in module sail)</a>
@@ -282,11 +328,27 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="tensor.html#sail.Tensor">Tensor (class in sail)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/sail.tensordot.html#sail.tensordot">tensordot() (in module sail)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/sail.optimizers.Optimizer.html#sail.optimizers.Optimizer.track_module">track_module() (sail.optimizers.Optimizer method)</a>
+</li>
       <li><a href="generated/sail.transpose.html#sail.transpose">transpose() (in module sail)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/sail.random.uniform.html#sail.random.uniform">uniform() (in module sail.random)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/sail.random.uniform_like.html#sail.random.uniform_like">uniform_like() (in module sail.random)</a>
+</li>
+      <li><a href="generated/sail.optimizers.Optimizer.html#sail.optimizers.Optimizer.update">update() (sail.optimizers.Optimizer method)</a>
 </li>
   </ul></td>
 </tr></table>

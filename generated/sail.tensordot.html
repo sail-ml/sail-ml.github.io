@@ -34,7 +34,7 @@
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sail.sum" href="sail.sum.html" />
+    <link rel="next" title="sail.max" href="sail.max.html" />
     <link rel="prev" title="sail.matmul" href="sail.matmul.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -91,6 +91,12 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/sail-ml/sail" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
       </ul>
       </div>
       
@@ -116,136 +122,30 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="reference internal" href="../sail.html">
    sail
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.expand_dims.html">
-     sail.expand_dims
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.reshape.html">
-     sail.reshape
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.rollaxis.html">
-     sail.rollaxis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.squeeze.html">
-     sail.squeeze
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.transpose.html">
-     sail.transpose
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.add.html">
-     sail.add
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.divide.html">
-     sail.divide
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.multiply.html">
-     sail.multiply
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.subtract.html">
-     sail.subtract
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.power.html">
-     sail.power
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.exp.html">
-     sail.exp
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.matmul.html">
-     sail.matmul
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     sail.tensordot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.sum.html">
-     sail.sum
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../tensor.html">
    sail.Tensor
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.Tensor.numpy.html">
-     sail.Tensor.numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.Tensor.grad.html">
-     sail.Tensor.grad
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.Tensor.backward.html">
-     sail.Tensor.backward
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../modules.html">
    sail.modules
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.modules.Module.html">
-     Module
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sail.modules.Linear.html">
-     Linear
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../losses.html">
+   sail.losses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../optimizers.html">
+   sail.optimizers
+  </a>
  </li>
 </ul>
 
@@ -287,27 +187,29 @@
 <h1>sail.tensordot<a class="headerlink" href="#sail-tensordot" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sail.tensordot">
-<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">tensordot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a><a class="headerlink" href="#sail.tensordot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes tensor dot product along axes provided</p>
+<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">tensordot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a><a class="headerlink" href="#sail.tensordot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the tensor dot product along axes provided</p>
 <p>When axes is array_like as <code class="docutils literal notranslate"><span class="pre">(a_axes,</span> <span class="pre">b_axes)</span></code> then sum the products of
-<cite>a</cite>’s and <cite>b</cite>’s elements over the axis specified in <code class="docutils literal notranslate"><span class="pre">(a_axes,</span> <span class="pre">b_axes)</span></code>.
-If axes is an integer <cite>N</cite>, then the last <cite>N</cite> dimensions of <cite>a</cite> and first
-<cite>N</cite> dimensions of <cite>b</cite> are used as <code class="docutils literal notranslate"><span class="pre">(a_axes,</span> <span class="pre">b_axes)</span></code>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – A 2D tensor</p></li>
-<li><p><strong>b</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – A 2D tensor</p></li>
-<li><p><strong>axes</strong> (<em>int</em><em> or </em><em>(</em><em>2</em><em>,</em><em>) </em><em>array_like</em>) – Axes to be summed over</p></li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<dl class="simple">
-<dt>Common uses:</dt><dd><ul class="simple">
+<cite>x1</cite>’s and <cite>x2</cite>’s elements over the axis specified in <code class="docutils literal notranslate"><span class="pre">(a_axes,</span> <span class="pre">b_axes)</span></code>.
+If axes is an integer <cite>N</cite>, then the last <cite>N</cite> dimensions of <cite>x1</cite> and first
+<cite>N</cite> dimensions of <cite>x2</cite> are used as <code class="docutils literal notranslate"><span class="pre">(a_axes,</span> <span class="pre">b_axes)</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<blockquote>
+<div><p>Common uses:</p>
+</div></blockquote>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">0</span></code> computes tensor product</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">1</span></code> computes tensor dot product</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">2</span></code> computes tensor double contraction</p></li>
+</ul>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x1</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – A 2D Tensor</p></li>
+<li><p><strong>x2</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – A 2D Tensor</p></li>
+<li><p><strong>axes</strong> (<em>int</em><em> or </em><em>(</em><em>2</em><em>,</em><em>) </em><em>array_like</em>) – Axes to be summed over</p></li>
 </ul>
 </dd>
 </dl>
@@ -334,7 +236,7 @@ If axes is an integer <cite>N</cite>, then the last <cite>N</cite> dimensions of
               <div class='prev-next-bottom'>
                 
     <a class='left-prev' id="prev-link" href="sail.matmul.html" title="previous page">sail.matmul</a>
-    <a class='right-next' id="next-link" href="sail.sum.html" title="next page">sail.sum</a>
+    <a class='right-next' id="next-link" href="sail.max.html" title="next page">sail.max</a>
 
               </div>
               
