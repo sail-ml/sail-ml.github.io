@@ -186,28 +186,9 @@
   <div class="section" id="sail-random-uniform">
 <h1>sail.random.uniform<a class="headerlink" href="#sail-random-uniform" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="sail.random.uniform">
-<span class="sig-prename descclassname"><span class="pre">sail.random.</span></span><span class="sig-name descname"><span class="pre">uniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tensor</span><a class="headerlink" href="#sail.random.uniform" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns tensor with the data randomly sampled from a uniform distribution <code class="docutils literal notranslate"><span class="pre">[min,</span> <span class="pre">max)</span></code></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>min</strong> (<em>float</em><em>, </em><em>optional</em>) – Minimum value of the distribution to sample from</p></li>
-<li><p><strong>max</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum value of the distribution to sample from</p></li>
-<li><p><strong>shape</strong> (<em>int</em><em> or </em><em>tuple of ints</em><em>, </em><em>optional</em>) – Shape of tensor to generate</p></li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
-<span class="go">tensor([[-1.09468198 -0.45043695 -0.24446410 -0.80004257  0.34527856]</span>
-<span class="go">        [-0.11556864  0.2868877   0.72795057  0.10089595 -0.46267119]</span>
-<span class="go">        [ 0.13150010  0.68349499  0.70531654  1.31088471 -0.81466377]</span>
-<span class="go">        [-0.48935455 -0.431037    1.25867462  1.31644297 -0.75355840]</span>
-<span class="go">        [-1.18125939  1.16481411  0.23229218  0.03774609 -0.41145924]], shape=(5, 5))</span>
-</pre></div>
-</div>
+<dt class="sig sig-object py" id="random.uniform">
+<span class="sig-prename descclassname"><span class="pre">random.</span></span><span class="sig-name descname"><span class="pre">uniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#random.uniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a random number in the range [a, b) or [a, b] depending on rounding.</p>
 </dd></dl>
 
 </div>
