@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Overview: module code &#8212; SAIL  documentation</title>
+    <title>sail &#8212; SAIL  documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -135,11 +135,41 @@
               
               <div>
                 
-  <h1>All modules for which code is available</h1>
-<ul><li><a href="libsail_c.html">libsail_c</a></li>
-<li><a href="sail.html">sail</a></li>
-<li><a href="sail_c.html">sail_c</a></li>
-</ul>
+  <h1>Source code for sail</h1><div class="highlight"><pre>
+<span></span><span class="c1"># from .autograd import Function</span>
+<span class="kn">from</span> <span class="nn">.modules</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.losses</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.optimizers</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.rand</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.csrc</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.csrc</span> <span class="kn">import</span> <span class="n">__all__</span> <span class="k">as</span> <span class="n">__csrc_all__</span>
+<span class="n">__all__</span> <span class="o">=</span> <span class="n">__csrc_all__</span>
+
+<span class="c1">## IMPORT SUBPACKAGES</span>
+
+<span class="kn">from</span> <span class="nn">sail</span> <span class="kn">import</span> <span class="n">optimizers</span> <span class="k">as</span> <span class="n">optimizers</span>
+<span class="kn">from</span> <span class="nn">sail</span> <span class="kn">import</span> <span class="n">modules</span> <span class="k">as</span> <span class="n">modules</span>
+<span class="kn">from</span> <span class="nn">sail</span> <span class="kn">import</span> <span class="n">losses</span> <span class="k">as</span> <span class="n">losses</span>
+<span class="kn">from</span> <span class="nn">sail</span> <span class="kn">import</span> <span class="n">rand</span> <span class="k">as</span> <span class="n">random</span>
+
+<span class="n">__all__</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;modules&quot;</span><span class="p">)</span>
+<span class="n">__all__</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;losses&quot;</span><span class="p">)</span>
+<span class="n">__all__</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;optimizers&quot;</span><span class="p">)</span>
+<span class="n">__all__</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;random&quot;</span><span class="p">)</span>
+
+<span class="c1">## IMPORT DOCUMENTATION</span>
+
+<span class="kn">from</span> <span class="nn">._sail_docs</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">._tensor_docs</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">._module_docs</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">._loss_docs</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">._optimizer_docs</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+
+
+
+</pre></div>
 
               </div>
               
