@@ -1,0 +1,6 @@
+﻿sail.cat
+========
+
+.. currentmodule:: sail
+
+.. autofunction:: cat
