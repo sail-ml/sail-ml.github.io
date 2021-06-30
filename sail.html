@@ -272,7 +272,7 @@
 <td><p>Returns a broadcasted view of <cite>tensor</cite></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/sail.cat.html#sail.cat" title="sail.cat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cat</span></code></a>(tensors[, axis])</p></td>
-<td><p>Concatenate the <cite>tensor</cite> along axis <cite>axis</cite></p></td>
+<td><p>Concatenate the <cite>tensors</cite> along axis <cite>axis</cite></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.expand_dims.html#sail.expand_dims" title="sail.expand_dims"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expand_dims</span></code></a>(tensor, axis)</p></td>
 <td><p>Returns a view or copy of <cite>tensor</cite> with a dimension inserted at index <cite>axis</cite></p></td>
@@ -289,8 +289,8 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.squeeze.html#sail.squeeze" title="sail.squeeze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squeeze</span></code></a>(tensor, axis)</p></td>
 <td><p>Returns a view or copy of <cite>tensor</cite> with a dimension removed at index <cite>axis</cite></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.stack.html#sail.stack" title="sail.stack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stack</span></code></a>(tensor, min, max)</p></td>
-<td><p>Returns a copy of the tensor with values clipped to between <cite>min</cite> and <cite>max</cite></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.stack.html#sail.stack" title="sail.stack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stack</span></code></a>(tensors[, axis])</p></td>
+<td><p>Stacks the <cite>tensors</cite> by creating a new aixs at <cite>axis</cite></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.transpose.html#sail.transpose" title="sail.transpose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transpose</span></code></a>(tensor, axes)</p></td>
 <td><p>Returns a view or copy of <cite>tensor</cite> with dimensions reordered to match <cite>axes</cite></p></td>

@@ -153,25 +153,42 @@
 <h1>sail.stack<a class="headerlink" href="#sail-stack" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sail.stack">
-<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a><a class="headerlink" href="#sail.stack" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a copy of the tensor with values clipped to between <cite>min</cite> and <cite>max</cite></p>
+<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a><a class="headerlink" href="#sail.stack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stacks the <cite>tensors</cite> by creating a new aixs at <cite>axis</cite></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The tensor shapes be equal</p>
+<p>The tensor shapes must be equal</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tensor</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – Input data</p></li>
-<li><p><strong>min</strong> (<em>float</em>) – Min value to compare to</p></li>
-<li><p><strong>max</strong> (<em>float</em>) – Max value to compare to</p></li>
+<li><p><strong>tensors</strong> (<em>List of Tensors</em>) – Input data</p></li>
+<li><p><strong>axis</strong> (<em>int</em>) – The axis to create</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sail</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">tensor([[[[-1.04555118  5.94666147  3.64661813  4.2072997 ]</span>
+<span class="go">          [-1.6440171  -4.31030703  3.17859864  4.52637434]</span>
+<span class="go">          [ 5.35747242  3.35846686  1.07206750  0.77765495]]</span>
 </pre></div>
 </div>
+<blockquote>
+<div><dl class="simple">
+<dt>[[ 5.56071281  6.41274500  7.91134834  2.64334273]</dt><dd><p>[12.57038212  1.11714733 15.22538662 -7.66946459]
+[ 0.35488090  8.23595142 17.21108818  2.7792344 ]]]</p>
+</dd>
+<dt>[[[ 3.90003204  3.48069668 -0.62004548 -0.89546055]</dt><dd><p>[ 1.00864995  1.89758968 -0.45129502  6.72634983]
+[ 2.19042587 -1.64629543  1.35155416  3.7297151 ]]</p>
+</dd>
+<dt>[[ 4.43006849  4.48486471  5.26496983 -0.22395246]</dt><dd><p>[15.39132500  6.0622344  -0.05248788 10.19824314]
+[ 7.6022191   5.0593729  14.05028057  9.58600616]]]], shape=(2, 2, 3, 4))</p>
+</dd>
+</dl>
+</div></blockquote>
 </dd></dl>
 
 </div>
