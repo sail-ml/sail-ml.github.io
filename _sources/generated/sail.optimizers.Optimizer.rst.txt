@@ -1,12 +1,12 @@
 ﻿.. role:: hidden
     :class: hidden-section
-.. currentmodule:: sail.optimizers
+.. currentmodule:: sail
 
 
-Optimizer
-=========
+optimizers.Optimizer
+====================
 
-.. autoclass:: Optimizer
+.. autoclass:: optimizers.Optimizer
     :members:
 
 

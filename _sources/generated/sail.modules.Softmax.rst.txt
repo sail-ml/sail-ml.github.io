@@ -1,18 +1,18 @@
 ﻿.. role:: hidden
     :class: hidden-section
-.. currentmodule:: sail.modules
+.. currentmodule:: sail
 
 
-Softmax
-=======
+modules.Softmax
+===============
 
-.. autoclass:: Softmax
+.. autoclass:: modules.Softmax
     :members:
     :exclude-members: forward
 
     .. note::
-        Softmax is a subclass of :class:`Module`. See :class:`Module` to find the base
-        functions which are implemented in Softmax.
+        modules.Softmax is a subclass of :class:`Module`. See :class:`Module` to find the base
+        functions which are implemented in modules.Softmax.
 
 
 ..

@@ -1,12 +1,12 @@
 ﻿.. role:: hidden
     :class: hidden-section
-.. currentmodule:: sail.losses
+.. currentmodule:: sail
 
 
-Loss
-====
+losses.Loss
+===========
 
-.. autoclass:: Loss
+.. autoclass:: losses.Loss
     :members:
 
 

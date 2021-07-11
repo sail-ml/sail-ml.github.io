@@ -1,18 +1,18 @@
 ﻿.. role:: hidden
     :class: hidden-section
-.. currentmodule:: sail.optimizers
+.. currentmodule:: sail
 
 
-SGD
-===
+optimizers.SGD
+==============
 
-.. autoclass:: SGD
+.. autoclass:: optimizers.SGD
     :members:
     :exclude-members: update, track_module
 
     .. note::
-        SGD is a subclass of :class:`Optimizer`. See :class:`Optimizer` to find the base
-        functions which are implemented in SGD.
+        optimizers.SGD is a subclass of :class:`Optimizer`. See :class:`Optimizer` to find the base
+        functions which are implemented in optimizers.SGD.
     .. note::
         To get a better understanding of how optimizers work to actually train a neural network,
         see :ref:`training` for more details.

@@ -1,18 +1,18 @@
 ﻿.. role:: hidden
     :class: hidden-section
-.. currentmodule:: sail.losses
+.. currentmodule:: sail
 
 
-SoftmaxCrossEntropy
-===================
+losses.SoftmaxCrossEntropy
+==========================
 
-.. autoclass:: SoftmaxCrossEntropy
+.. autoclass:: losses.SoftmaxCrossEntropy
     :members:
     :exclude-members: forward
 
     .. note::
-        SoftmaxCrossEntropy is a subclass of :class:`Module`. See :class:`Module` to find the base
-        functions which are implemented in SoftmaxCrossEntropy.
+        losses.SoftmaxCrossEntropy is a subclass of :class:`Module`. See :class:`Module` to find the base
+        functions which are implemented in losses.SoftmaxCrossEntropy.
 
 
 ..

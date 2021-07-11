@@ -1,18 +1,18 @@
 ﻿.. role:: hidden
     :class: hidden-section
-.. currentmodule:: sail.modules
+.. currentmodule:: sail
 
 
-ReLU
-====
+modules.ReLU
+============
 
-.. autoclass:: ReLU
+.. autoclass:: modules.ReLU
     :members:
     :exclude-members: forward
 
     .. note::
-        ReLU is a subclass of :class:`Module`. See :class:`Module` to find the base
-        functions which are implemented in ReLU.
+        modules.ReLU is a subclass of :class:`Module`. See :class:`Module` to find the base
+        functions which are implemented in modules.ReLU.
 
 
 ..

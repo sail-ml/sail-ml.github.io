@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SGD &#8212; SAIL  documentation</title>
+    <title>optimizers.SGD &#8212; SAIL  documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -31,11 +31,10 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Optimizer" href="sail.optimizers.Optimizer.html" />
+    <link rel="prev" title="optimizers.Optimizer" href="sail.optimizers.Optimizer.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -116,7 +115,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption">
+    <p class="caption" role="heading">
  <span class="caption-text">
   Python:
  </span>
@@ -183,31 +182,8 @@
               
               <div>
                 
-  <div class="section" id="sgd">
-<h1>SGD<a class="headerlink" href="#sgd" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="sail.optimizers.SGD">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sail.optimizers.</span></span><span class="sig-name descname"><span class="pre">SGD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">learning_rate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sail.optimizers.SGD" title="Permalink to this definition">¶</a></dt>
-<dd><p>Executes the following update to parameters tracked by <code class="docutils literal notranslate"><span class="pre">Optimizer.track_module(module)</span></code>:</p>
-<div class="math notranslate nohighlight">
-\[\text{updated_param} = \text{param} + -(\text{gradient} * \text(learning\_rate))\]</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>learning_rate</strong> (<em>float</em>) – The learning rate that controls the speed of updates</p>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>SGD is a subclass of <a class="reference internal" href="sail.optimizers.Optimizer.html#sail.optimizers.Optimizer" title="sail.optimizers.Optimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optimizer</span></code></a>. See <a class="reference internal" href="sail.optimizers.Optimizer.html#sail.optimizers.Optimizer" title="sail.optimizers.Optimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optimizer</span></code></a> to find the base
-functions which are implemented in SGD.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To get a better understanding of how optimizers work to actually train a neural network,
-see <a class="reference internal" href="../details/training.html#training"><span class="std std-ref">SAIL Model Training</span></a> for more details.</p>
-</div>
-</dd></dl>
-
+  <div class="section" id="optimizers-sgd">
+<h1>optimizers.SGD<a class="headerlink" href="#optimizers-sgd" title="Permalink to this headline">¶</a></h1>
 </div>
 
 
@@ -216,7 +192,7 @@ see <a class="reference internal" href="../details/training.html#training"><span
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="sail.optimizers.Optimizer.html" title="previous page">Optimizer</a>
+    <a class='left-prev' id="prev-link" href="sail.optimizers.Optimizer.html" title="previous page">optimizers.Optimizer</a>
 
               </div>
               
@@ -239,7 +215,7 @@ see <a class="reference internal" href="../details/training.html#training"><span
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.0.<br/>
 </p>
     </div>
     
