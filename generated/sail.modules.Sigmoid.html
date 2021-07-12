@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>modules.Sigmoid &#8212; SAIL  documentation</title>
+    <title>Sigmoid &#8212; SAIL  documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -31,11 +31,12 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="modules.Softmax" href="sail.modules.Softmax.html" />
-    <link rel="prev" title="modules.ReLU" href="sail.modules.ReLU.html" />
+    <link rel="next" title="Softmax" href="sail.modules.Softmax.html" />
+    <link rel="prev" title="ReLU" href="sail.modules.ReLU.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -138,6 +139,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../initializers.html">
+   sail.init
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../losses.html">
    sail.losses
   </a>
@@ -183,8 +189,21 @@
               
               <div>
                 
-  <div class="section" id="modules-sigmoid">
-<h1>modules.Sigmoid<a class="headerlink" href="#modules-sigmoid" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="sigmoid">
+<h1>Sigmoid<a class="headerlink" href="#sigmoid" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="sail.modules.Sigmoid">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sail.modules.</span></span><span class="sig-name descname"><span class="pre">Sigmoid</span></span><a class="headerlink" href="#sail.modules.Sigmoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the sigmoid function to the input data, which squashes the input to be between [0, 1]</p>
+<div class="math notranslate nohighlight">
+\[\text{Sigmoid}(x_{i}) = \frac{\mathrm{1} }{\mathrm{1} + e^{-x} }\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sigmoid is a subclass of <a class="reference internal" href="sail.modules.Module.html#sail.modules.Module" title="sail.modules.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a>. See <a class="reference internal" href="sail.modules.Module.html#sail.modules.Module" title="sail.modules.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> to find the base
+functions which are implemented in Sigmoid.</p>
+</div>
+</dd></dl>
+
 </div>
 
 
@@ -193,8 +212,8 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="sail.modules.ReLU.html" title="previous page">modules.ReLU</a>
-    <a class='right-next' id="next-link" href="sail.modules.Softmax.html" title="next page">modules.Softmax</a>
+    <a class='left-prev' id="prev-link" href="sail.modules.ReLU.html" title="previous page">ReLU</a>
+    <a class='right-next' id="next-link" href="sail.modules.Softmax.html" title="next page">Softmax</a>
 
               </div>
               

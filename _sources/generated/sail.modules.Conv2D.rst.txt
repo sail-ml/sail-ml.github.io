@@ -1,18 +1,18 @@
 ﻿.. role:: hidden
     :class: hidden-section
-.. currentmodule:: sail
+.. currentmodule:: sail.modules
 
 
-modules.Conv2D
-==============
+Conv2D
+======
 
-.. autoclass:: modules.Conv2D
+.. autoclass:: Conv2D
     :members:
     :exclude-members: forward
 
     .. note::
-        modules.Conv2D is a subclass of :class:`Module`. See :class:`Module` to find the base
-        functions which are implemented in modules.Conv2D.
+        Conv2D is a subclass of :class:`Module`. See :class:`Module` to find the base
+        functions which are implemented in Conv2D.
 
 
 ..

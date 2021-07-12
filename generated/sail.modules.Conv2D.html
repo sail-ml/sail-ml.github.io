@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>modules.Conv2D &#8212; SAIL  documentation</title>
+    <title>Conv2D &#8212; SAIL  documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="modules.ReLU" href="sail.modules.ReLU.html" />
-    <link rel="prev" title="modules.Linear" href="sail.modules.Linear.html" />
+    <link rel="next" title="ReLU" href="sail.modules.ReLU.html" />
+    <link rel="prev" title="Linear" href="sail.modules.Linear.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -138,6 +138,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../initializers.html">
+   sail.init
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../losses.html">
    sail.losses
   </a>
@@ -183,8 +188,45 @@
               
               <div>
                 
-  <div class="section" id="modules-conv2d">
-<h1>modules.Conv2D<a class="headerlink" href="#modules-conv2d" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="conv2d">
+<h1>Conv2D<a class="headerlink" href="#conv2d" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="sail.modules.Conv2D">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sail.modules.</span></span><span class="sig-name descname"><span class="pre">Conv2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strides</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sail.modules.Conv2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes Conv2D on data. ONLY DOES SAME PADDING</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_channels</strong> (<em>int</em>) – size of input feature space</p></li>
+<li><p><strong>out_channels</strong> (<em>int</em>) – size of output feature space</p></li>
+<li><p><strong>kernel_size</strong> (<em>int</em><em> or </em><em>tuple</em>) – kernel size</p></li>
+<li><p><strong>strides</strong> (<em>int</em><em> or </em><em>tuple</em>) – strides</p></li>
+<li><p><strong>use_bias</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, a bias term will be added to the function.
+Default: <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sail.modules.Conv2D.weights">
+<span class="sig-name descname"><span class="pre">weights</span></span><a class="headerlink" href="#sail.modules.Conv2D.weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>The trainable weights of the operation. The weights are initialized using Kaiming Uniform initialization.
+The shape of the weights is <code class="docutils literal notranslate"><span class="pre">(out_channels,</span> <span class="pre">in_channels,</span> <span class="pre">kernel_height,</span> <span class="pre">kernel_width)</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sail.modules.Conv2D.bias">
+<span class="sig-name descname"><span class="pre">bias</span></span><a class="headerlink" href="#sail.modules.Conv2D.bias" title="Permalink to this definition">¶</a></dt>
+<dd><p>The trainable biases of the operation. The biases are initialized to zero, and
+have a shape of <code class="docutils literal notranslate"><span class="pre">(out_channels,)</span></code>.</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Conv2D is a subclass of <a class="reference internal" href="sail.modules.Module.html#sail.modules.Module" title="sail.modules.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a>. See <a class="reference internal" href="sail.modules.Module.html#sail.modules.Module" title="sail.modules.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> to find the base
+functions which are implemented in Conv2D.</p>
+</div>
+</dd></dl>
+
 </div>
 
 
@@ -193,8 +235,8 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="sail.modules.Linear.html" title="previous page">modules.Linear</a>
-    <a class='right-next' id="next-link" href="sail.modules.ReLU.html" title="next page">modules.ReLU</a>
+    <a class='left-prev' id="prev-link" href="sail.modules.Linear.html" title="previous page">Linear</a>
+    <a class='right-next' id="next-link" href="sail.modules.ReLU.html" title="next page">ReLU</a>
 
               </div>
               

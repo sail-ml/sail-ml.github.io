@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SAIL Reference &#8212; SAIL  documentation</title>
+    <title>sail.init &#8212; SAIL  documentation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -31,11 +31,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="sail" href="sail.html" />
-    <link rel="prev" title="View or Copy" href="details/view-or-copy.html" />
+    <link rel="next" title="sail.init.kaiming_uniform" href="generated/sail.init.kaiming_uniform.html" />
+    <link rel="prev" title="Softmax" href="generated/sail.modules.Softmax.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -76,7 +77,7 @@
 </li>
 
 <li class="toctree-l1 current active nav-item">
- <a class="current reference internal nav-link" href="#">
+ <a class="reference internal nav-link" href="api-reference.html">
   SAIL Reference
  </a>
 </li>
@@ -121,7 +122,7 @@
   Python:
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="sail.html">
    sail
@@ -137,8 +138,8 @@
    sail.modules
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="initializers.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    sail.init
   </a>
  </li>
@@ -166,9 +167,19 @@
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#initializers">
+   Initializers
+  </a>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -188,18 +199,30 @@
               
               <div>
                 
-  <div class="section" id="sail-reference">
-<h1>SAIL Reference<a class="headerlink" href="#sail-reference" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="sail.html">sail</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tensor.html">sail.Tensor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">sail.modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="initializers.html">sail.init</a></li>
-<li class="toctree-l1"><a class="reference internal" href="losses.html">sail.losses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="optimizers.html">sail.optimizers</a></li>
-</ul>
+  <div class="section" id="sail-init">
+<h1>sail.init<a class="headerlink" href="#sail-init" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="initializers">
+<h2>Initializers<a class="headerlink" href="#initializers" title="Permalink to this headline">¶</a></h2>
+<table class="longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.init.kaiming_uniform.html#sail.init.kaiming_uniform" title="sail.init.kaiming_uniform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kaiming_uniform</span></code></a>(x1[, mode, nonlin])</p></td>
+<td><p>Fills the tensor <cite>x1</cite> with values generated from a kaiming uniform distribution <span class="math notranslate nohighlight">\(\mathcal{{U}}(\text{-bound}, \text{bound})\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.init.kaiming_normal.html#sail.init.kaiming_normal" title="sail.init.kaiming_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kaiming_normal</span></code></a>(x1[, mode, nonlin])</p></td>
+<td><p>Fills the tensor <cite>x1</cite> with values generated from a kaiming normal distribution <span class="math notranslate nohighlight">\(\mathcal{{N}}(0, \text{std}^2)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/sail.init.xavier_uniform.html#sail.init.xavier_uniform" title="sail.init.xavier_uniform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xavier_uniform</span></code></a>(x1[, gain])</p></td>
+<td><p>Fills the tensor <cite>x1</cite> with values generated from an xavier uniform distribution with bounds of <code class="docutils literal notranslate"><span class="pre">[-bound,</span> <span class="pre">bound)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/sail.init.xavier_normal.html#sail.init.xavier_normal" title="sail.init.xavier_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xavier_normal</span></code></a>(x1[, gain])</p></td>
+<td><p>Fills the tensor <cite>x1</cite> with values generated from an xavier normal distribution <span class="math notranslate nohighlight">\(\mathcal{{N}}(0, \text{std}^2)\)</span></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -209,8 +232,8 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="details/view-or-copy.html" title="previous page">View or Copy</a>
-    <a class='right-next' id="next-link" href="sail.html" title="next page">sail</a>
+    <a class='left-prev' id="prev-link" href="generated/sail.modules.Softmax.html" title="previous page">Softmax</a>
+    <a class='right-next' id="next-link" href="generated/sail.init.kaiming_uniform.html" title="next page">sail.init.kaiming_uniform</a>
 
               </div>
               

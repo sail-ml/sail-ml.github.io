@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>losses.SoftmaxCrossEntropy &#8212; SAIL  documentation</title>
+    <title>SoftmaxCrossEntropy &#8212; SAIL  documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -35,7 +35,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="sail.optimizers" href="../optimizers.html" />
-    <link rel="prev" title="losses.Loss" href="sail.losses.Loss.html" />
+    <link rel="prev" title="Loss" href="sail.losses.Loss.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -137,6 +137,11 @@
    sail.modules
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../initializers.html">
+   sail.init
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="reference internal" href="../losses.html">
    sail.losses
@@ -183,8 +188,26 @@
               
               <div>
                 
-  <div class="section" id="losses-softmaxcrossentropy">
-<h1>losses.SoftmaxCrossEntropy<a class="headerlink" href="#losses-softmaxcrossentropy" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="softmaxcrossentropy">
+<h1>SoftmaxCrossEntropy<a class="headerlink" href="#softmaxcrossentropy" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="sail.losses.SoftmaxCrossEntropy">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sail.losses.</span></span><span class="sig-name descname"><span class="pre">SoftmaxCrossEntropy</span></span><a class="headerlink" href="#sail.losses.SoftmaxCrossEntropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the softmax cross entropy loss of input <cite>logits</cite>, compared to <cite>target</cite></p>
+<dl class="simple">
+<dt>Forward Parameters:</dt><dd><ul class="simple">
+<li><p><strong>logits</strong> (<em>Tensor</em>) – The logits (2D) produced by a model. These are values produced BEFORE a softmax activation</p></li>
+<li><p><strong>targets</strong> (<em>Tensor</em>) – The targets (1D) to compare with. These targets must be integers, where each value indicates the index of the correct class</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>SoftmaxCrossEntropy is a subclass of <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code>. See <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> to find the base
+functions which are implemented in SoftmaxCrossEntropy.</p>
+</div>
+</dd></dl>
+
 </div>
 
 
@@ -193,7 +216,7 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="sail.losses.Loss.html" title="previous page">losses.Loss</a>
+    <a class='left-prev' id="prev-link" href="sail.losses.Loss.html" title="previous page">Loss</a>
     <a class='right-next' id="next-link" href="../optimizers.html" title="next page">sail.optimizers</a>
 
               </div>

@@ -1,6 +1,6 @@
 ﻿sail.random.normal
 ==================
 
-.. currentmodule:: sail
+.. currentmodule:: sail.random
 
-.. autofunction:: random.normal
+.. autofunction:: normal

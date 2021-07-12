@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sail.multiply &#8212; SAIL  documentation</title>
+    <title>sail.init.xavier_uniform &#8212; SAIL  documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -35,8 +35,8 @@
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sail.power" href="sail.power.html" />
-    <link rel="prev" title="sail.divide" href="sail.divide.html" />
+    <link rel="next" title="sail.init.xavier_normal" href="sail.init.xavier_normal.html" />
+    <link rel="prev" title="sail.init.kaiming_normal" href="sail.init.kaiming_normal.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -123,7 +123,7 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1">
   <a class="reference internal" href="../sail.html">
    sail
   </a>
@@ -138,7 +138,7 @@
    sail.modules
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active">
   <a class="reference internal" href="../initializers.html">
    sail.init
   </a>
@@ -189,30 +189,37 @@
               
               <div>
                 
-  <div class="section" id="sail-multiply">
-<h1>sail.multiply<a class="headerlink" href="#sail-multiply" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="sail-init-xavier-uniform">
+<h1>sail.init.xavier_uniform<a class="headerlink" href="#sail-init-xavier-uniform" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="sail.multiply">
-<span class="sig-prename descclassname"><span class="pre">sail.</span></span><span class="sig-name descname"><span class="pre">multiply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><span class="pre">Tensor</span></a></span></span><a class="headerlink" href="#sail.multiply" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the elementwise multiplication of Tensors <cite>x1</cite> and <cite>x2</cite></p>
+<dt class="sig sig-object py" id="sail.init.xavier_uniform">
+<span class="sig-prename descclassname"><span class="pre">sail.init.</span></span><span class="sig-name descname"><span class="pre">xavier_uniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tensor</span></span></span><a class="headerlink" href="#sail.init.xavier_uniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fills the tensor <cite>x1</cite> with values generated from an xavier uniform distribution with bounds of <code class="docutils literal notranslate"><span class="pre">[-bound,</span> <span class="pre">bound)</span></code></p>
 <div class="math notranslate nohighlight">
-\[\text{out} = \text{x1} * \text{x2}\]</div>
+\[\text{bound} = \text{gain} * \sqrt{\frac{6}{fan\_in + fan\_out}}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If tensor shapes do not match, they must be broadcastable to a common shape.</p>
+<p>Xavier uniform method originally described in <a class="reference external" href="https://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf">Understanding the difficulty of training deep feedforward neural networks</a> (Glorot, X. &amp; Bengio, Y., 2010)</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tensor <cite>x1</cite> must have at least 2 dimensions</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x1</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – First Tensor</p></li>
-<li><p><strong>x2</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – Second Tensor</p></li>
+<li><p><strong>x1</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – Input tensor to be filled</p></li>
+<li><p><strong>gain</strong> (<em>float</em>) – Scaling parameter</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sail</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">xavier_uniform</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="go">tensor([[-0.06891035 0.24276903 0.33934638 0.15491413]</span>
+<span class="go">                [0.16111927 0.36402372 0.36035901 0.39027894]</span>
+<span class="go">                [0.23715521 0.31049126 -0.34743783 -0.39470020]</span>
+<span class="go">                [0.11064298 -0.00741466 -0.04901789 0.40659216]], shape=(4, 4))</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -225,8 +232,8 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="sail.divide.html" title="previous page">sail.divide</a>
-    <a class='right-next' id="next-link" href="sail.power.html" title="next page">sail.power</a>
+    <a class='left-prev' id="prev-link" href="sail.init.kaiming_normal.html" title="previous page">sail.init.kaiming_normal</a>
+    <a class='right-next' id="next-link" href="sail.init.xavier_normal.html" title="next page">sail.init.xavier_normal</a>
 
               </div>
               

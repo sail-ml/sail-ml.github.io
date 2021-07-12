@@ -1,0 +1,6 @@
+﻿sail.init.kaiming\_normal
+=========================
+
+.. currentmodule:: sail.init
+
+.. autofunction:: kaiming_normal

@@ -1,0 +1,6 @@
+﻿sail.init.xavier\_normal
+========================
+
+.. currentmodule:: sail.init
+
+.. autofunction:: xavier_normal

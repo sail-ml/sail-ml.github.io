@@ -1,18 +1,18 @@
 ﻿.. role:: hidden
     :class: hidden-section
-.. currentmodule:: sail
+.. currentmodule:: sail.modules
 
 
-modules.Sigmoid
-===============
+Sigmoid
+=======
 
-.. autoclass:: modules.Sigmoid
+.. autoclass:: Sigmoid
     :members:
     :exclude-members: forward
 
     .. note::
-        modules.Sigmoid is a subclass of :class:`Module`. See :class:`Module` to find the base
-        functions which are implemented in modules.Sigmoid.
+        Sigmoid is a subclass of :class:`Module`. See :class:`Module` to find the base
+        functions which are implemented in Sigmoid.
 
 
 ..

@@ -1,6 +1,6 @@
 ﻿sail.random.uniform\_like
 =========================
 
-.. currentmodule:: sail
+.. currentmodule:: sail.random
 
-.. autofunction:: random.uniform_like
+.. autofunction:: uniform_like

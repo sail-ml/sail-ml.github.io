@@ -1,0 +1,6 @@
+﻿sail.init.xavier\_uniform
+=========================
+
+.. currentmodule:: sail.init
+
+.. autofunction:: xavier_uniform

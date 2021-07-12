@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>losses.Loss &#8212; SAIL  documentation</title>
+    <title>Loss &#8212; SAIL  documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -34,7 +34,7 @@
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="losses.SoftmaxCrossEntropy" href="sail.losses.SoftmaxCrossEntropy.html" />
+    <link rel="next" title="SoftmaxCrossEntropy" href="sail.losses.SoftmaxCrossEntropy.html" />
     <link rel="prev" title="sail.losses" href="../losses.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -137,6 +137,11 @@
    sail.modules
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../initializers.html">
+   sail.init
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="reference internal" href="../losses.html">
    sail.losses
@@ -183,8 +188,24 @@
               
               <div>
                 
-  <div class="section" id="losses-loss">
-<h1>losses.Loss<a class="headerlink" href="#losses-loss" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="loss">
+<h1>Loss<a class="headerlink" href="#loss" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="sail.losses.Loss">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sail.losses.</span></span><span class="sig-name descname"><span class="pre">Loss</span></span><a class="headerlink" href="#sail.losses.Loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for all losses</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sail.losses.Loss.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">inputs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sail.losses.Loss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes the forward propogation defined by the loss.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Call <code class="docutils literal notranslate"><span class="pre">Loss(*inputs)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">Loss.forward(*inputs)</span></code>.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -194,7 +215,7 @@
               <div class='prev-next-bottom'>
                 
     <a class='left-prev' id="prev-link" href="../losses.html" title="previous page">sail.losses</a>
-    <a class='right-next' id="next-link" href="sail.losses.SoftmaxCrossEntropy.html" title="next page">losses.SoftmaxCrossEntropy</a>
+    <a class='right-next' id="next-link" href="sail.losses.SoftmaxCrossEntropy.html" title="next page">SoftmaxCrossEntropy</a>
 
               </div>
               

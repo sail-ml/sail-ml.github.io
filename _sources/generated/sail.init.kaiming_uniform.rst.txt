@@ -1,0 +1,6 @@
+﻿sail.init.kaiming\_uniform
+==========================
+
+.. currentmodule:: sail.init
+
+.. autofunction:: kaiming_uniform

@@ -31,6 +31,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -138,6 +139,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../initializers.html">
+   sail.init
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../losses.html">
    sail.losses
   </a>
@@ -185,6 +191,40 @@
                 
   <div class="section" id="sail-random-normal-like">
 <h1>sail.random.normal_like<a class="headerlink" href="#sail-random-normal-like" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="sail.random.normal_like">
+<span class="sig-prename descclassname"><span class="pre">sail.random.</span></span><span class="sig-name descname"><span class="pre">normal_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tensor</span></span></span><a class="headerlink" href="#sail.random.normal_like" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns tensor with the data randomly sampled from a normal distribution, matching the shape and dtype of <cite>tensor</cite></p>
+<div class="math notranslate nohighlight">
+\[\text{\text{out}}_{{i}} \sim \mathcal{{N}}(\text{mean}, \text{std})\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor</strong> (<a class="reference internal" href="../tensor.html#sail.Tensor" title="sail.Tensor"><em>Tensor</em></a>) – Tensor to pull shape and dtype from</p></li>
+<li><p><strong>mean</strong> (<em>float</em><em>, </em><em>optional</em>) – Mean of the distribution to sample from</p></li>
+<li><p><strong>std</strong> (<em>float</em><em>, </em><em>optional</em>) – Standard deviation of the distribution to sample from</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">tensor([[ 7.74214363  9.92879963 11.89224243 10.95844841 11.03163052]</span>
+<span class="go">        [10.55741215  6.18779612 11.78238773  8.78879356 11.94272995]</span>
+<span class="go">        [11.21028709 14.10308552 11.88035011 13.36896324 10.38013458]</span>
+<span class="go">        [ 6.62501764  4.37194538  8.72444248  7.75856304  9.74470139]</span>
+<span class="go">        [11.36308765  9.17077446 11.09016800  9.5281763  12.16518688]], shape=(5, 5))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">sail</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal_like</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span>
+<span class="go">tensor([[ 0.58550960  2.60267472 -2.28640366 -0.33341908 -0.21114956]</span>
+<span class="go">        [-0.67798704 -1.83559990  1.19175482  0.35748199  0.6637082 ]</span>
+<span class="go">        [ 2.05228353  0.42571735 -1.46537054  0.08667278  1.31353283]</span>
+<span class="go">        [ 0.25700086  1.47934365  0.3713915   0.54774326  1.25102699]</span>
+<span class="go">        [ 1.84346902  0.57650614  0.97455609  1.14918649 -1.60790646]], shape=(5, 5))</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </div>
 
 

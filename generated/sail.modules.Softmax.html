@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>modules.Softmax &#8212; SAIL  documentation</title>
+    <title>Softmax &#8212; SAIL  documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -31,11 +31,12 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/sail-favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sail.losses" href="../losses.html" />
-    <link rel="prev" title="modules.Sigmoid" href="sail.modules.Sigmoid.html" />
+    <link rel="next" title="sail.init" href="../initializers.html" />
+    <link rel="prev" title="Sigmoid" href="sail.modules.Sigmoid.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -138,6 +139,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../initializers.html">
+   sail.init
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../losses.html">
    sail.losses
   </a>
@@ -183,8 +189,21 @@
               
               <div>
                 
-  <div class="section" id="modules-softmax">
-<h1>modules.Softmax<a class="headerlink" href="#modules-softmax" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="softmax">
+<h1>Softmax<a class="headerlink" href="#softmax" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="sail.modules.Softmax">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sail.modules.</span></span><span class="sig-name descname"><span class="pre">Softmax</span></span><a class="headerlink" href="#sail.modules.Softmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the softmax function to the input data, which squashes the inputs to sum to 1 along dimension 1</p>
+<div class="math notranslate nohighlight">
+\[\text{Softmax}(x_{i}) = \frac{\exp(x_i)}{\sum_j \exp(x_j)}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Softmax is a subclass of <a class="reference internal" href="sail.modules.Module.html#sail.modules.Module" title="sail.modules.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a>. See <a class="reference internal" href="sail.modules.Module.html#sail.modules.Module" title="sail.modules.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> to find the base
+functions which are implemented in Softmax.</p>
+</div>
+</dd></dl>
+
 </div>
 
 
@@ -193,8 +212,8 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="sail.modules.Sigmoid.html" title="previous page">modules.Sigmoid</a>
-    <a class='right-next' id="next-link" href="../losses.html" title="next page">sail.losses</a>
+    <a class='left-prev' id="prev-link" href="sail.modules.Sigmoid.html" title="previous page">Sigmoid</a>
+    <a class='right-next' id="next-link" href="../initializers.html" title="next page">sail.init</a>
 
               </div>
               
